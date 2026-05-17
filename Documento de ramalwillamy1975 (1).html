@@ -1,0 +1,1984 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="mobile-web-app-capable" content="yes">
+<title>Treino 30s — 1.435 palavras em 15 dias</title>
+<script src="https://code.responsivevoice.org/responsivevoice.js?key=FREE"></script>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,700;1,400&family=DM+Mono:wght@400;600&display=swap');
+
+:root {
+  --bg: #0A0A0F;
+  --card: #12121A;
+  --card2: #1A1A24;
+  --border: #252535;
+  --text: #F0EDE8;
+  --muted: #9090A8;
+  --gold: #FFD600;
+  --gold-glow: rgba(255,214,0,0.5);
+  --green: #00E676;
+  --green-neon: #00FF88;
+  --green-glow: rgba(0,255,136,0.5);
+  --red: #FF1744;
+  --red-neon: #FF3366;
+  --red-glow: rgba(255,51,102,0.5);
+  --blue: #448AFF;
+  --blue-neon: #00B4FF;
+  --blue-glow: rgba(0,180,255,0.5);
+  --purple: #9C27B0;
+  --purple-neon: #B000FF;
+  --orange: #FF9800;
+  --orange-neon: #FFB347;
+  --orange-glow: rgba(255,179,71,0.5);
+  --r: 16px;
+}
+
+* { margin:0; padding:0; box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
+body { background:var(--bg); color:var(--text); font-family:'DM Sans',sans-serif; min-height:100vh; }
+
+#unlock {
+  position:fixed; inset:0; z-index:999; background:var(--bg);
+  display:flex; flex-direction:column; align-items:center; justify-content:center;
+  gap:22px; padding:32px; text-align:center;
+}
+.ul-icon { font-size:70px; animation:bob 2s ease-in-out infinite; }
+@keyframes bob { 0%,100%{transform:translateY(0);} 50%{transform:translateY(-12px);} }
+.ul-h1 { font-family:'Bebas Neue'; font-size:42px; letter-spacing:3px; color:var(--gold); line-height:1; }
+.ul-h2 { font-size:14px; color:var(--muted); line-height:1.7; max-width:270px; }
+.ul-steps {
+  background:var(--card); border:1px solid var(--border);
+  border-radius:var(--r); padding:18px 20px; width:100%; max-width:300px; text-align:left;
+}
+.ul-step { display:flex; align-items:flex-start; gap:10px; margin-bottom:10px; font-size:13px; color:var(--muted); line-height:1.5; }
+.ul-step:last-child { margin-bottom:0; }
+.ul-step-num { font-family:'Bebas Neue'; font-size:18px; color:var(--gold); line-height:1; flex-shrink:0; margin-top:1px; }
+.ul-btn {
+  width:100%; max-width:300px; padding:18px;
+  background:var(--gold); color:#000; border:none;
+  border-radius:14px; font-family:'Bebas Neue';
+  font-size:24px; letter-spacing:3px; cursor:pointer;
+}
+
+.nav {
+  position:fixed; top:0; left:0; right:0; z-index:100;
+  background:rgba(10,10,15,0.97); border-bottom:1px solid var(--border);
+  padding:11px 16px; display:flex; align-items:center; justify-content:space-between;
+}
+.nav-left { display:flex; align-items:center; gap:12px; }
+.back-btn {
+  background:rgba(255,214,0,0.12); border:1px solid var(--gold); color:var(--gold);
+  font-family:'DM Mono'; font-size:11px; padding:5px 12px; border-radius:24px; cursor:pointer;
+  transition:all 0.2s;
+}
+.back-btn:active { background:var(--gold); color:#000; transform:scale(0.96); }
+.nav-logo { font-family:'Bebas Neue'; font-size:20px; letter-spacing:3px; color:var(--gold); }
+.nav-right { display:flex; gap:12px; align-items:center; }
+
+.nav-badge {
+  font-family: 'DM Mono';
+  font-size: 12px;
+  background: linear-gradient(135deg, rgba(0,255,136,0.25), rgba(0,230,118,0.08));
+  border: 2px solid var(--green-neon);
+  border-radius: 40px;
+  padding: 7px 18px;
+  color: #FFF;
+  font-weight: bold;
+  box-shadow: 0 0 12px rgba(0,255,136,0.5);
+  animation: badgeGlow 1.5s ease-in-out infinite alternate;
+  backdrop-filter: blur(4px);
+  letter-spacing: 1px;
+}
+.nav-badge span { 
+  color: var(--green-neon); 
+  font-size: 22px;
+  font-weight: bold;
+  font-family: 'Bebas Neue';
+  letter-spacing: 2px;
+  margin-left: 8px;
+  text-shadow: 0 0 5px rgba(0,255,136,0.6);
+}
+@keyframes badgeGlow {
+  0% { box-shadow: 0 0 5px rgba(0,255,136,0.3); border-color: var(--green); }
+  100% { box-shadow: 0 0 25px rgba(0,255,136,0.8); border-color: #00FF88; }
+}
+
+.tabs {
+  position:fixed; bottom:0; left:0; right:0; z-index:100;
+  background:rgba(10,10,15,0.98); border-top:1px solid var(--border); display:flex;
+}
+.tab { flex:1; padding:11px 4px 9px; border:none; background:none; color:var(--muted); cursor:pointer; display:flex; flex-direction:column; align-items:center; gap:3px; transition:color 0.2s; }
+.tab.active { color:var(--gold); }
+.tab-icon { font-size:18px; }
+.tab-lbl { font-family:'DM Mono'; font-size:8px; letter-spacing:1px; text-transform:uppercase; }
+
+.content { padding:56px 0 70px; }
+.page { display:none; }
+.page.active { display:block; }
+.tw { padding:14px; }
+
+.dpills {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  padding-bottom: 12px;
+  scrollbar-width: thin;
+  margin-bottom: 12px;
+}
+.dpills::-webkit-scrollbar { height: 4px; }
+.dpills::-webkit-scrollbar-track { background: var(--border); border-radius: 4px; }
+.dpills::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 4px; }
+
+.dp {
+  flex-shrink: 0;
+  min-width: 120px;
+  padding: 10px 12px;
+  border-radius: 20px;
+  background: var(--card);
+  border: 2px solid var(--border);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: center;
+  backdrop-filter: blur(4px);
+}
+
+.dp:hover { transform: translateY(-3px); transition: all 0.2s ease; }
+
+.dp:first-child {
+  background: linear-gradient(135deg, rgba(255,214,0,0.15), rgba(255,214,0,0.05));
+  border-color: var(--gold);
+  box-shadow: 0 0 12px var(--gold-glow);
+  animation: allPulse 2s ease-in-out infinite;
+}
+.dp:first-child .dp-title { color: var(--gold); text-shadow: 0 0 8px rgba(255,214,0,0.8); }
+.dp:first-child .dp-stats { color: var(--gold); font-weight: bold; }
+@keyframes allPulse {
+  0% { box-shadow: 0 0 5px rgba(255,214,0,0.3); border-color: var(--gold); }
+  100% { box-shadow: 0 0 20px rgba(255,214,0,0.7); border-color: #FFE44D; }
+}
+
+.dp.active {
+  border-color: var(--gold);
+  background: linear-gradient(135deg, rgba(255,214,0,0.25), rgba(255,214,0,0.1));
+  box-shadow: 0 0 20px var(--gold-glow);
+  animation: activeGlow 1.2s ease-in-out infinite alternate;
+}
+.dp.active .dp-title { color: var(--gold); text-shadow: 0 0 10px rgba(255,214,0,0.9); }
+@keyframes activeGlow {
+  from { box-shadow: 0 0 10px rgba(255,214,0,0.4); border-color: var(--gold); }
+  to { box-shadow: 0 0 25px rgba(255,214,0,0.9); border-color: #FFE44D; }
+}
+
+.dp.completed {
+  border-color: var(--green-neon);
+  background: linear-gradient(135deg, rgba(0,255,136,0.2), rgba(0,230,118,0.05));
+  box-shadow: 0 0 15px var(--green-glow);
+  animation: completedPulse 2s ease-in-out infinite;
+}
+.dp.completed .dp-title { color: var(--green-neon); text-shadow: 0 0 8px rgba(0,255,136,0.7); }
+.dp.completed .dp-stats { color: var(--green-neon); }
+@keyframes completedPulse {
+  0% { box-shadow: 0 0 5px rgba(0,255,136,0.3); border-color: var(--green); }
+  50% { box-shadow: 0 0 25px rgba(0,255,136,0.8); border-color: #00FF88; }
+  100% { box-shadow: 0 0 5px rgba(0,255,136,0.3); border-color: var(--green); }
+}
+
+.dp[data-progress="high"] { border-color: var(--gold); box-shadow: 0 0 10px var(--gold-glow); }
+.dp[data-progress="high"] .dp-title { color: var(--gold); }
+.dp[data-progress="medium"] { border-color: var(--blue-neon); box-shadow: 0 0 10px var(--blue-glow); }
+.dp[data-progress="medium"] .dp-title { color: var(--blue-neon); }
+.dp[data-progress="low"] { border-color: var(--orange-neon); box-shadow: 0 0 8px var(--orange-glow); }
+.dp[data-progress="low"] .dp-title { color: var(--orange-neon); }
+.dp[data-progress="none"] { border-color: var(--red-neon); box-shadow: 0 0 6px var(--red-glow); }
+.dp[data-progress="none"] .dp-title { color: var(--red-neon); }
+
+.dp-title {
+  font-family: 'Bebas Neue';
+  font-size: 15px;
+  letter-spacing: 1px;
+  margin-bottom: 4px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+.dp-stats { font-family: 'DM Mono'; font-size: 9px; margin-bottom: 6px; font-weight: bold; }
+.dp-bar-bg { background: var(--border); border-radius: 6px; height: 8px; overflow: hidden; margin-bottom: 4px; }
+.dp-bar-fill { height: 100%; border-radius: 6px; transition: width 0.3s; }
+.dp-percent { font-family: 'DM Mono'; font-size: 9px; font-weight: bold; }
+
+.score-strip { display:flex; gap:8px; margin-bottom:12px; flex-wrap:wrap; }
+.sc-box { flex:1; background:var(--card); border:1px solid var(--border); border-radius:10px; padding:10px 8px; text-align:center; min-width:60px; }
+.sc-n { font-family:'Bebas Neue'; font-size:32px; line-height:1; font-weight: bold; }
+.sc-l { font-family:'DM Mono'; font-size:8px; letter-spacing:1px; margin-top:2px; }
+
+.refazer-buttons {
+  display:flex;
+  gap:8px;
+  margin-bottom:12px;
+}
+.refazer-btn {
+  flex:1;
+  padding:10px 4px;
+  border-radius:10px;
+  font-family:'Bebas Neue';
+  font-size:13px;
+  letter-spacing:1px;
+  cursor:pointer;
+  transition:all 0.2s;
+  border: none;
+  font-weight: bold;
+}
+.refazer-btn:active { transform:scale(0.97); }
+.refazer-wrong { background:rgba(255,23,68,0.25); border:1px solid var(--red-neon); color:var(--red-neon); text-shadow: 0 0 2px rgba(255,23,68,0.3); }
+.refazer-topreps { background:rgba(255,214,0,0.25); border:1px solid var(--gold); color:var(--gold); text-shadow: 0 0 2px rgba(255,214,0,0.3); }
+.refazer-notknown { background:rgba(156,39,176,0.25); border:1px solid var(--purple-neon); color:var(--purple-neon); text-shadow: 0 0 2px rgba(156,39,176,0.3); }
+
+.main-card {
+  background:var(--card); border:1px solid var(--border);
+  border-radius:20px; overflow:hidden; margin-bottom:12px;
+}
+.top-strip { height:3px; background:var(--border); position:relative; }
+.top-fill { height:100%; background:var(--gold); transition:width 1s linear; }
+.meta-row {
+  display:flex; justify-content:space-between; align-items:center;
+  padding:10px 16px 0;
+  font-family:'DM Mono'; font-size:10px; color:var(--muted);
+}
+#wnum { color: var(--gold); font-weight: bold; }
+#wday { color: var(--gold); font-weight: bold; text-shadow: 0 0 3px rgba(255,214,0,0.3); }
+
+.timer-area {
+  display:flex; flex-direction:column; align-items:center;
+  padding:18px 16px 14px; position:relative;
+}
+.ring-wrap { position:relative; width:140px; height:140px; margin-bottom:14px; }
+.rsvg { transform:rotate(-90deg); }
+.r-track { fill:none; stroke:var(--border); stroke-width:8; }
+.r-arc {
+  fill:none; stroke:var(--gold); stroke-width:8;
+  stroke-linecap:round;
+  stroke-dasharray:440; stroke-dashoffset:0;
+  transition:stroke-dashoffset 1s linear, stroke 0.3s;
+}
+.r-center { position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; }
+.r-num { font-family:'Bebas Neue'; font-size:48px; line-height:1; color:var(--gold); transition:color 0.3s; text-shadow: 0 0 5px rgba(255,214,0,0.3); }
+.r-num.urgent { color:var(--red); animation:pulse 0.5s ease-in-out infinite alternate; }
+@keyframes pulse { from{transform:scale(1);} to{transform:scale(1.06);} }
+.r-sub { font-family:'DM Mono'; font-size:9px; color:var(--muted); letter-spacing:2px; }
+
+.replay-row {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  margin-bottom: 18px;
+  flex-wrap: wrap;
+}
+.replay-btn {
+  padding: 12px 20px;
+  border-radius: 60px;
+  font-family: 'Bebas Neue';
+  font-size: 14px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-weight: bold;
+  border: none;
+  position: relative;
+}
+.replay-btn:active { transform: scale(0.95); }
+.speak-btn {
+  background: linear-gradient(135deg, var(--green-neon), #009688);
+  color: #000;
+  box-shadow: 0 0 20px rgba(0,255,136,0.6);
+  border: 1px solid rgba(255,255,255,0.3);
+}
+.normal-btn {
+  background: linear-gradient(135deg, var(--blue-neon), #0066CC);
+  color: #FFF;
+  box-shadow: 0 0 20px rgba(0,180,255,0.6);
+  border: 1px solid rgba(255,255,255,0.3);
+}
+.slow-btn {
+  background: linear-gradient(135deg, var(--orange-neon), #E65100);
+  color: #000;
+  box-shadow: 0 0 20px rgba(255,107,0,0.6);
+  border: 1px solid rgba(255,255,255,0.3);
+}
+.listen-translate-btn {
+  background: linear-gradient(135deg, #9C27B0, #E040FB);
+  color: #FFF;
+  box-shadow: 0 0 20px rgba(156,39,176,0.6);
+  border: 1px solid rgba(255,255,255,0.3);
+  animation: glowPurple 1.2s ease-in-out infinite alternate;
+}
+.repeat5-btn {
+  background: linear-gradient(135deg, var(--green-neon), #009688);
+  color: #000;
+  box-shadow: 0 0 20px rgba(0,255,136,0.6);
+  border: 1px solid rgba(255,255,255,0.3);
+  animation: glowGreen 1.2s ease-in-out infinite alternate;
+}
+@keyframes glowGreen { 0% { box-shadow: 0 0 5px rgba(0,255,136,0.4); } 100% { box-shadow: 0 0 25px rgba(0,255,136,0.9); } }
+@keyframes glowBlue { 0% { box-shadow: 0 0 5px rgba(0,180,255,0.4); } 100% { box-shadow: 0 0 25px rgba(0,180,255,0.9); } }
+@keyframes glowOrange { 0% { box-shadow: 0 0 5px rgba(255,107,0,0.4); } 100% { box-shadow: 0 0 25px rgba(255,107,0,0.9); } }
+@keyframes glowPurple { 0% { box-shadow: 0 0 5px rgba(176,0,255,0.4); } 100% { box-shadow: 0 0 25px rgba(176,0,255,0.9); } }
+
+.control-strip {
+  display: flex;
+  gap: 10px;
+  padding: 0 14px 14px;
+}
+.control-btn {
+  flex: 1;
+  padding: 14px 6px;
+  border-radius: 60px;
+  font-family: 'Bebas Neue';
+  font-size: 14px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-align: center;
+  font-weight: bold;
+  border: 1px solid rgba(255,255,255,0.3);
+}
+.control-btn:active { transform: scale(0.96); }
+.prev-btn {
+  background: linear-gradient(135deg, var(--blue-neon), #0033CC);
+  color: #FFF;
+  box-shadow: 0 0 18px rgba(68,138,255,0.6);
+  animation: glowBlue 1.2s ease-in-out infinite alternate;
+}
+.refazer5x-btn {
+  background: linear-gradient(135deg, var(--purple-neon), #7B1FA2);
+  color: #FFF;
+  box-shadow: 0 0 18px rgba(176,0,255,0.6);
+  animation: glowPurpleControl 1.2s ease-in-out infinite alternate;
+}
+.refazer1x-btn {
+  background: linear-gradient(135deg, var(--orange-neon), #E65100);
+  color: #000;
+  box-shadow: 0 0 18px rgba(255,107,0,0.6);
+  animation: glowOrange 1.2s ease-in-out infinite alternate;
+}
+.next-btn-control {
+  background: linear-gradient(135deg, var(--red-neon), #B71C1C);
+  color: #FFF;
+  box-shadow: 0 0 18px rgba(255,51,102,0.6);
+  animation: glowRed 1.2s ease-in-out infinite alternate;
+}
+@keyframes glowRed { 0% { box-shadow: 0 0 5px rgba(255,51,102,0.4); } 100% { box-shadow: 0 0 25px rgba(255,51,102,0.9); } }
+@keyframes glowPurpleControl { 0% { box-shadow: 0 0 5px rgba(176,0,255,0.4); } 100% { box-shadow: 0 0 25px rgba(176,0,255,0.9); } }
+
+.write-section { padding:0 14px 6px; }
+.write-label {
+  font-family:'DM Mono'; font-size:9px; color:var(--muted);
+  letter-spacing:2px; text-transform:uppercase; margin-bottom:8px;
+  display:flex; align-items:center; gap:8px;
+}
+.write-label::after { content:''; flex:1; height:1px; background:var(--border); }
+.write-input-wrap { position:relative; margin-bottom:10px; }
+.write-input {
+  width:100%; background:var(--card2); border:2px solid var(--border);
+  border-radius:12px; padding:14px 50px 14px 16px;
+  color:var(--text); font-family:'DM Sans'; font-size:20px; font-weight:700;
+  outline:none; transition:border-color 0.2s;
+  caret-color:var(--gold);
+  text-shadow: 0 0 2px rgba(0,0,0,0.3);
+}
+.write-input:focus { border-color:var(--gold); box-shadow: 0 0 10px rgba(255,214,0,0.3); }
+.write-input::placeholder { color:var(--muted); font-weight:300; font-size:15px; }
+.write-input.correct { border-color:var(--green); background:rgba(0,230,118,0.08); box-shadow: 0 0 10px rgba(0,230,118,0.2); }
+.write-input.wrong { border-color:var(--red); background:rgba(255,23,68,0.08); }
+.write-input.partial { border-color:var(--blue); background:rgba(68,138,255,0.08); }
+.clear-btn {
+  position:absolute; right:14px; top:50%; transform:translateY(-50%);
+  background:none; border:none; color:var(--muted); font-size:18px;
+  cursor:pointer;
+}
+.clear-btn:active { color:var(--text); }
+.verify-btn {
+  width:100%; padding:14px; border-radius:12px;
+  background:var(--gold); color:#000; border:none;
+  font-family:'Bebas Neue'; font-size:22px; letter-spacing:3px;
+  cursor:pointer; transition:all 0.15s;
+  box-shadow: 0 0 15px rgba(255,214,0,0.4);
+}
+.verify-btn:active { transform:scale(0.98); opacity:0.9; }
+.verify-btn:disabled { background:var(--border); color:var(--muted); cursor:default; box-shadow: none; }
+
+.feedback-panel {
+  display:none; margin:0 14px 12px;
+  border-radius:14px; padding:16px;
+  border:1px solid var(--border); animation:fadeUp 0.3s ease;
+}
+@keyframes fadeUp { from{opacity:0;transform:translateY(8px);} to{opacity:1;transform:translateY(0);} }
+.feedback-panel.show { display:block; }
+.fp-correct { border-color:var(--green); background:rgba(0,230,118,0.08); box-shadow: 0 0 15px rgba(0,230,118,0.2); }
+.fp-partial { border-color:var(--blue); background:rgba(68,138,255,0.08); }
+.fp-wrong { border-color:var(--red); background:rgba(255,23,68,0.08); }
+.fp-row1 { display:flex; align-items:center; gap:12px; margin-bottom:10px; }
+.fp-icon { font-size:32px; flex-shrink:0; }
+.fp-word { font-family:'Bebas Neue'; font-size:42px; letter-spacing:2px; line-height:1; text-shadow: 0 0 5px rgba(0,0,0,0.5); }
+.fp-translation-icon { font-size: 32px; margin-right: 8px; }
+.fp-translation-text { font-size: 28px !important; font-weight: bold; color: var(--gold); line-height: 1.3; margin: 8px 0; word-break: break-word; }
+.fp-pt { font-size: 14px; color: var(--muted); font-style: italic; margin-top: 2px; font-weight: bold; }
+.fp-diff { font-family:'DM Mono'; font-size:13px; margin-bottom:10px; line-height:1.6; }
+.fp-diff .c { color:var(--green); font-weight: bold; }
+.fp-diff .w { color:var(--red); text-decoration:line-through; }
+.fp-diff .m { color:var(--gold); font-style:italic; font-weight: bold; }
+.fp-tip { font-size:12px; color:var(--muted); line-height:1.6; padding:10px 12px; background:var(--card); border-radius:8px; }
+.fp-tip strong { color: var(--green-neon); font-size: 16px; letter-spacing: 2px; }
+
+.pg-wrap { padding:14px; }
+.pg-hero {
+  background:var(--card); border:1px solid var(--border);
+  border-radius:var(--r); padding:20px; margin-bottom:14px; text-align:center;
+}
+.pg-big { font-family:'Bebas Neue'; font-size:68px; color:var(--gold); line-height:1; text-shadow: 0 0 10px rgba(255,214,0,0.3); }
+.pg-sub { font-size:13px; color:var(--muted); margin-top:4px; font-weight: bold; }
+.pg-bar-o { height:5px; background:var(--border); border-radius:3px; margin-top:14px; overflow:hidden; }
+.pg-bar-i { height:100%; background:linear-gradient(90deg,var(--gold),var(--green)); border-radius:3px; transition:width 0.5s; }
+.pg-session { display:flex; gap:8px; margin-bottom:14px; }
+.pg-s-box { flex:1; background:var(--card); border:1px solid var(--border); border-radius:10px; padding:12px 8px; text-align:center; }
+.pg-s-n { font-family:'Bebas Neue'; font-size:28px; line-height:1; font-weight: bold; }
+.pg-s-l { font-family:'DM Mono'; font-size:8px; letter-spacing:1px; margin-top:2px; }
+.days-grid { display:flex; flex-direction:column; gap:8px; }
+.day-card {
+  background:var(--card); border:1px solid var(--border);
+  border-radius:12px; padding:14px; cursor:pointer;
+  transition:all 0.2s;
+}
+.day-card:active { transform:scale(0.98); }
+.day-card.completed { 
+  border-color: var(--green-neon);
+  background: linear-gradient(135deg, rgba(0,255,136,0.12), rgba(0,230,118,0.03));
+  box-shadow: 0 0 15px rgba(0,255,136,0.3);
+  animation: cardGlow 2s ease-in-out infinite;
+}
+@keyframes cardGlow {
+  0% { box-shadow: 0 0 5px rgba(0,255,136,0.2); border-color: var(--green); }
+  50% { box-shadow: 0 0 20px rgba(0,255,136,0.5); border-color: #00FF88; }
+  100% { box-shadow: 0 0 5px rgba(0,255,136,0.2); border-color: var(--green); }
+}
+.day-header { display:flex; justify-content:space-between; align-items:baseline; flex-wrap:wrap; margin-bottom:8px; }
+.day-title { font-family:'Bebas Neue'; font-size:18px; letter-spacing:2px; font-weight: bold; }
+.day-card.completed .day-title { color: var(--green-neon) !important; text-shadow: 0 0 5px rgba(0,255,136,0.4); }
+.day-stats { font-family:'DM Mono'; font-size:9px; color:var(--muted); font-weight: bold; }
+.day-card.completed .day-stats { color: var(--green-neon); }
+.day-bar { height:4px; background:var(--border); border-radius:2px; overflow:hidden; margin:8px 0; }
+.day-fill { height:100%; border-radius:2px; transition:width 0.3s; }
+.day-detail { font-family:'DM Mono'; font-size:9px; color:var(--muted); display:flex; justify-content:space-between; }
+
+.cfg-wrap { padding:14px; }
+.cfg-block { margin-bottom:22px; }
+.cfg-lbl { font-family:'DM Mono'; font-size:11px; color:var(--gold); letter-spacing:3px; text-transform:uppercase; margin-bottom:10px; font-weight: bold; }
+.cfg-opts { display:flex; gap:8px; flex-wrap:wrap; }
+.co {
+  padding:9px 14px; border-radius:10px; border:1px solid var(--border);
+  background:var(--card); color:var(--muted); font-family:'DM Mono';
+  font-size:10px; cursor:pointer; transition:all 0.2s;
+}
+.co.active { background:var(--gold); color:#000; border-color:var(--gold); font-weight:700; }
+.cfg-slider-wrap { padding:4px 0; }
+.cfg-slider {
+  width:100%; -webkit-appearance:none; height:4px; border-radius:2px; outline:none; cursor:pointer;
+  background:linear-gradient(90deg, var(--gold) var(--p,30%), var(--border) var(--p,30%));
+}
+.cfg-slider::-webkit-slider-thumb {
+  -webkit-appearance:none; width:22px; height:22px; border-radius:50%;
+  background:var(--gold); cursor:pointer; box-shadow:0 0 10px rgba(255,214,0,0.4);
+}
+.cfg-val { font-family:'Bebas Neue'; font-size:40px; color:var(--gold); text-align:center; margin-top:6px; text-shadow: 0 0 5px rgba(255,214,0,0.3); }
+.cfg-reset {
+  width:100%; padding:13px; background:transparent; border:1px solid var(--red);
+  border-radius:10px; color:var(--red); font-family:'DM Mono'; font-size:11px;
+  cursor:pointer; letter-spacing:2px; text-transform:uppercase;
+}
+.toast {
+  position:fixed; bottom:80px; left:50%; transform:translateX(-50%) translateY(14px);
+  padding:9px 20px; border-radius:20px; font-family:'DM Mono'; font-size:11px; font-weight:700;
+  opacity:0; transition:all 0.25s; z-index:999; pointer-events:none;
+  white-space:nowrap;
+}
+.toast.show { opacity:1; transform:translateX(-50%) translateY(0); }
+.t-ok { background:var(--green); color:#000; }
+.t-err { background:var(--red); color:#fff; }
+.t-info { background:var(--gold); color:#000; }
+.t-part { background:var(--blue); color:#fff; }
+
+.voice-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.9);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+}
+.voice-modal.show { opacity: 1; visibility: visible; }
+.voice-card {
+  background: var(--card);
+  border: 2px solid var(--gold);
+  border-radius: 30px;
+  padding: 30px;
+  max-width: 350px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 0 50px rgba(255,214,0,0.3);
+}
+.voice-icon { font-size: 80px; animation: voicePulse 1s ease-in-out infinite; }
+@keyframes voicePulse { 0%,100% { transform: scale(1); } 50% { transform: scale(1.1); text-shadow: 0 0 30px var(--green); } }
+.voice-status { font-family: 'Bebas Neue'; font-size: 24px; color: var(--gold); margin: 15px 0; }
+.voice-heard { background: var(--card2); padding: 15px; border-radius: 15px; margin: 15px 0; font-size: 18px; font-weight: bold; }
+.voice-match { font-size: 14px; margin: 10px 0; padding: 10px; border-radius: 10px; }
+.voice-match.correct { background: rgba(0,230,118,0.2); color: var(--green); }
+.voice-match.wrong { background: rgba(255,23,68,0.2); color: var(--red); }
+.voice-match.partial { background: rgba(68,138,255,0.2); color: var(--blue); }
+.voice-buttons { display: flex; gap: 10px; margin-top: 20px; }
+.voice-btn { flex: 1; padding: 12px; border-radius: 40px; font-family: 'Bebas Neue'; font-size: 16px; letter-spacing: 2px; cursor: pointer; border: none; transition: all 0.2s; }
+.voice-btn:active { transform: scale(0.96); }
+.voice-btn-primary { background: var(--green); color: #000; }
+.voice-btn-secondary { background: var(--card2); color: var(--text); border: 1px solid var(--border); }
+
+.speed-slider-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.9);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+}
+.speed-slider-modal.show { opacity: 1; visibility: visible; }
+.speed-card {
+  background: var(--card);
+  border: 2px solid var(--orange);
+  border-radius: 30px;
+  padding: 25px;
+  max-width: 320px;
+  width: 90%;
+  text-align: center;
+}
+.speed-title { font-family: 'Bebas Neue'; font-size: 28px; color: var(--orange); margin-bottom: 20px; }
+.speed-slider-modal .cfg-slider { width: 100%; margin: 20px 0; }
+.speed-value { font-size: 32px; font-weight: bold; color: var(--orange); margin: 10px 0; }
+.speed-presets { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin: 15px 0; }
+.speed-preset { padding: 6px 12px; border-radius: 20px; background: var(--card2); border: 1px solid var(--border); color: var(--muted); font-size: 12px; cursor: pointer; }
+.speed-preset.active { background: var(--orange); color: #000; border-color: var(--orange); }
+.speed-close { width: 100%; padding: 12px; border-radius: 40px; background: var(--orange); color: #000; font-family: 'Bebas Neue'; font-size: 18px; border: none; cursor: pointer; margin-top: 15px; }
+
+.error-chart-container {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 12px;
+  margin-bottom: 12px;
+}
+.error-chart-title {
+  font-family: 'DM Mono';
+  font-size: 10px;
+  color: var(--gold);
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+}
+.error-chart-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+.error-bar-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.error-bar-word {
+  width: 100px;
+  font-family: 'DM Mono';
+  font-size: 11px;
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.error-bar-bg {
+  flex: 1;
+  height: 24px;
+  background: var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+}
+.error-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--red-neon), var(--orange-neon));
+  border-radius: 12px;
+  transition: width 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 8px;
+  color: white;
+  font-family: 'DM Mono';
+  font-size: 10px;
+  font-weight: bold;
+}
+.error-bar-count {
+  width: 40px;
+  text-align: right;
+  font-family: 'DM Mono';
+  font-size: 11px;
+  color: var(--red-neon);
+}
+
+.practice-all-btn {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg, var(--purple-neon), #7B1FA2);
+  border: none;
+  border-radius: 12px;
+  color: white;
+  font-family: 'Bebas Neue';
+  font-size: 18px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  margin-bottom: 12px;
+  transition: all 0.2s;
+}
+.practice-all-btn:active { transform: scale(0.98); }
+
+.notification {
+  position: fixed;
+  top: 70px;
+  right: 10px;
+  background: linear-gradient(135deg, var(--purple-neon), #7B1FA2);
+  color: white;
+  padding: 12px 20px;
+  border-radius: 30px;
+  font-family: 'DM Mono';
+  font-size: 12px;
+  font-weight: bold;
+  z-index: 1000;
+  animation: slideInRight 0.3s ease, fadeOut 3s ease 2.7s forwards;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+@keyframes slideInRight {
+  from { transform: translateX(100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+@keyframes fadeOut {
+  to { opacity: 0; visibility: hidden; }
+}
+</style>
+</head>
+<body>
+
+<div id="unlock">
+  <div class="ul-icon">🎧</div>
+  <div class="ul-h1">TREINO 30s</div>
+  <div class="ul-h2">1.435 palavras · 15 dias (100 por dia)</div>
+  <div class="ul-steps">
+    <div class="ul-step"><span class="ul-step-num">1</span>Escolha TODAS ou um DIA</div>
+    <div class="ul-step"><span class="ul-step-num">2</span>Ouça a palavra em inglês</div>
+    <div class="ul-step"><span class="ul-step-num">3</span>Você tem 30 segundos para escrever</div>
+    <div class="ul-step"><span class="ul-step-num">4</span>Clique VERIFICAR — veja se acertou</div>
+  </div>
+  <button class="ul-btn" id="unlock-btn">COMEÇAR ▶</button>
+</div>
+
+<div class="nav">
+  <div class="nav-left">
+    <button class="back-btn" id="btn-back" onclick="goBack()">← Voltar</button>
+    <div class="nav-logo">30S WORDS</div>
+  </div>
+  <div class="nav-right">
+    <div class="nav-badge">✅ DOMINADAS <span id="nv-ok">0</span></div>
+  </div>
+</div>
+
+<div class="content">
+  <div class="page active" id="page-treino">
+    <div class="tw">
+      <div class="dpills" id="dpills"></div>
+      <div class="score-strip">
+        <div class="sc-box"><div class="sc-n" id="sc-ok" style="color:var(--green-neon)">0</div><div class="sc-l">CERTAS</div></div>
+        <div class="sc-box"><div class="sc-n" id="sc-par" style="color:var(--blue-neon)">0</div><div class="sc-l">QUASE</div></div>
+        <div class="sc-box"><div class="sc-n" id="sc-err" style="color:var(--red-neon)">0</div><div class="sc-l">ERRADAS</div></div>
+        <div class="sc-box"><div class="sc-n" id="sc-pct" style="color:var(--gold)">0%</div><div class="sc-l">ACERTO</div></div>
+      </div>
+      <div class="refazer-buttons">
+        <button class="refazer-btn refazer-wrong" onclick="refazerErradas()">❌ REFAZER ERRADAS</button>
+        <button class="refazer-btn refazer-topreps" onclick="refazerTopRepeticoes()">🎯 TOP REPETIÇÕES</button>
+        <button class="refazer-btn refazer-notknown" onclick="refazerNaoDominadas()">📚 NÃO DOMINADAS</button>
+      </div>
+      <div class="main-card">
+        <div class="top-strip"><div class="top-fill" id="top-fill" style="width:100%"></div></div>
+        <div class="meta-row">
+          <span id="wnum">1 / 100</span>
+          <span id="wday" style="color:var(--gold)">Todas</span>
+        </div>
+        <div class="timer-area">
+          <div class="ring-wrap">
+            <svg class="rsvg" width="140" height="140" viewBox="0 0 140 140">
+              <circle class="r-track" cx="70" cy="70" r="60"/>
+              <circle class="r-arc" id="r-arc" cx="70" cy="70" r="60"/>
+            </svg>
+            <div class="r-center">
+              <div class="r-num" id="r-num">30</div>
+              <div class="r-sub" id="r-sub">SEG</div>
+            </div>
+          </div>
+          <div class="replay-row">
+            <button class="replay-btn speak-btn" onclick="openVoiceModal()">🎤 FALAR</button>
+            <button class="replay-btn normal-btn" onclick="playWordNormal()">🔊 NORMAL</button>
+            <button class="replay-btn slow-btn" onclick="openSpeedModal()">🐢 DEVAGAR</button>
+            <button class="replay-btn listen-translate-btn" onclick="listenWordAndTranslation()">🔊 + 🇧🇷</button>
+            <button class="replay-btn repeat5-btn" onclick="repeatWord5Times()">🔁 REPETIR 5x</button>
+          </div>
+        </div>
+        <div class="write-section">
+          <div class="write-label">✏️ Escreva a palavra que ouviu</div>
+          <div class="write-input-wrap">
+            <input class="write-input" id="write-input" type="text" autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false" placeholder="Digite a palavra em inglês...">
+            <button class="clear-btn" onclick="clearInput()" id="clear-btn" style="display:none">✕</button>
+          </div>
+          <button class="verify-btn" id="verify-btn" onclick="verifyWord()">VERIFICAR ✓</button>
+        </div>
+        <div class="control-strip">
+          <button class="control-btn prev-btn" onclick="previousWord()">← ANTERIOR</button>
+          <button class="control-btn refazer5x-btn" onclick="refazer5Ciclos()">🔄 REFAZER 5x</button>
+          <button class="control-btn refazer1x-btn" onclick="refazerPalavraAtual()">🔄 REFAZER 1x</button>
+          <button class="control-btn next-btn-control" onclick="nextWord()">PRÓXIMA →</button>
+        </div>
+      </div>
+      <div class="feedback-panel" id="fb-panel">
+        <div class="fp-row1">
+          <div class="fp-icon" id="fp-icon">—</div>
+          <div>
+            <div class="fp-word" id="fp-word">—</div>
+            <div id="fp-translation-area" style="margin-top: 8px;"></div>
+          </div>
+        </div>
+        <div class="fp-diff" id="fp-diff"></div>
+        <div class="fp-tip" id="fp-tip"></div>
+        <button class="next-btn primary" onclick="nextWord()">PRÓXIMA PALAVRA →</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="page" id="page-prog">
+    <div class="pg-wrap">
+      <div class="pg-hero">
+        <div class="pg-big" id="pg-big">0</div>
+        <div class="pg-sub" id="pg-sub">palavras dominadas</div>
+        <div class="pg-bar-o"><div class="pg-bar-i" id="pg-bar" style="width:0%"></div></div>
+      </div>
+      <button class="practice-all-btn" onclick="practiceAllDifficult()">🎯 PRATICAR TODAS AS DIFÍCEIS (TOP 10)</button>
+      <div class="error-chart-container">
+        <div class="error-chart-title">📊 PALAVRAS COM MAIS ERROS</div>
+        <div class="error-chart-bars" id="error-chart-bars"></div>
+      </div>
+      <div class="pg-session" id="pg-session"></div>
+      <div class="cfg-lbl" style="padding:0 0 10px">📅 DIAS (100 palavras por dia)</div>
+      <div class="days-grid" id="days-grid"></div>
+    </div>
+  </div>
+
+  <div class="page" id="page-cfg">
+    <div class="cfg-wrap">
+      <div class="cfg-block">
+        <div class="cfg-lbl">🎤 RIGOR DA CORREÇÃO</div>
+        <div class="cfg-slider-wrap">
+          <input type="range" class="cfg-slider" id="rigor-sl" min="50" max="100" value="75" step="5" oninput="setRigor(this.value)">
+          <div class="cfg-val" id="rigor-v">75%</div>
+        </div>
+      </div>
+      <div class="cfg-block">
+        <div class="cfg-lbl">🐢 VELOCIDADE DO DEVAGAR</div>
+        <div class="cfg-slider-wrap">
+          <input type="range" class="cfg-slider" id="slow-speed-sl" min="0.3" max="1.1" value="0.7" step="0.05" oninput="setSlowSpeed(this.value)">
+          <div class="cfg-val" id="slow-speed-v">0.70x</div>
+        </div>
+      </div>
+      <div class="cfg-block">
+        <div class="cfg-lbl">⏱️ Tempo por palavra</div>
+        <div class="cfg-slider-wrap">
+          <input type="range" class="cfg-slider" id="time-sl" min="10" max="60" value="30" step="5" oninput="setTime(this.value)">
+          <div class="cfg-val" id="time-v">30s</div>
+        </div>
+      </div>
+      <div class="cfg-block">
+        <div class="cfg-lbl">📖 Dica após verificar</div>
+        <div class="cfg-opts">
+          <button class="co active" id="tip-pron" onclick="setTip('pron')">Pronúncia</button>
+          <button class="co" id="tip-trans" onclick="setTip('trans')">Tradução</button>
+          <button class="co" id="tip-both" onclick="setTip('both')">Ambos</button>
+        </div>
+      </div>
+      <div class="cfg-block">
+        <div class="cfg-lbl">🎲 Ordem das palavras</div>
+        <div class="cfg-opts">
+          <button class="co active" id="ord-random" onclick="setOrd('random')">Aleatória</button>
+          <button class="co" id="ord-seq" onclick="setOrd('seq')">Sequencial</button>
+          <button class="co" id="ord-hard" onclick="setOrd('hard')">Não dominadas</button>
+        </div>
+      </div>
+      <div class="cfg-block">
+        <button class="cfg-reset" onclick="resetAll()">🗑 Resetar progresso</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="tabs">
+  <button class="tab active" onclick="goTab('treino',this)"><span class="tab-icon">🎧</span><span class="tab-lbl">Treino</span></button>
+  <button class="tab" onclick="goTab('prog',this);renderProg();renderErrorChart()"><span class="tab-icon">📊</span><span class="tab-lbl">Progresso</span></button>
+  <button class="tab" onclick="goTab('cfg',this)"><span class="tab-icon">⚙️</span><span class="tab-lbl">Config</span></button>
+</div>
+<div class="toast" id="toast"></div>
+
+<div id="voice-modal" class="voice-modal">
+  <div class="voice-card">
+    <div class="voice-icon">🎤</div>
+    <div class="voice-status" id="voice-status">Fale a palavra...</div>
+    <div class="voice-heard" id="voice-heard"></div>
+    <div class="voice-match" id="voice-match"></div>
+    <div class="voice-buttons">
+      <button class="voice-btn voice-btn-secondary" onclick="closeVoiceModal()">FECHAR</button>
+      <button class="voice-btn voice-btn-primary" onclick="confirmVoiceMatch()">✅ CONFIRMAR</button>
+    </div>
+  </div>
+</div>
+
+<div id="speed-modal" class="speed-slider-modal">
+  <div class="speed-card">
+    <div class="speed-title">🐢 VELOCIDADE DO DEVAGAR</div>
+    <input type="range" class="cfg-slider" id="speed-slider-modal" min="0.3" max="1.1" step="0.02" value="0.7" oninput="updateSpeedModalValue(this.value)">
+    <div class="speed-value" id="speed-modal-value">0.70x</div>
+    <div class="speed-presets">
+      <button class="speed-preset" onclick="setSpeedModalPreset(0.3)">0.3x</button>
+      <button class="speed-preset" onclick="setSpeedModalPreset(0.5)">0.5x</button>
+      <button class="speed-preset" onclick="setSpeedModalPreset(0.7)">0.7x</button>
+      <button class="speed-preset" onclick="setSpeedModalPreset(0.9)">0.9x</button>
+      <button class="speed-preset" onclick="setSpeedModalPreset(1.1)">1.1x</button>
+    </div>
+    <button class="speed-close" onclick="closeSpeedModal()">FECHAR</button>
+  </div>
+</div>
+
+<script>
+// DICIONÁRIO COMPLETO (1435 palavras)
+const TR = {
+"a":"um/uma","abandoned":"abandonado","ability":"habilidade","able":"capaz","about":"sobre","above":"acima","absence":"ausência","academic":"acadêmico","academically":"academicamente","accent":"sotaque","access":"acesso","according":"de acordo","accounting":"contabilidade","across":"através","adapt":"adaptar","add":"adicionar","additional":"adicional","address":"endereço","adjust":"ajustar","admiration":"admiração","admission":"admissão","adopt":"adotar","adulthood":"idade adulta","advance":"avançar","advantage":"vantagem","advice":"conselho","advise":"aconselhar","affect":"afetar","afraid":"com medo","after":"depois","afternoon":"tarde","again":"novamente","against":"contra","age":"idade","agency":"agência","agent":"agente","aggression":"agressão","ago":"atrás","agree":"concordar","agricultural":"agrícola","agriculture":"agricultura","ahead":"à frente","aim":"objetivo","air":"ar","aircraft":"aeronave","all":"todo","allegation":"alegação","allow":"permitir","almost":"quase","alone":"sozinho","along":"ao longo","already":"já","also":"também","although":"embora","always":"sempre","amateur":"amador","amazing":"incrível","ambition":"ambição","among":"entre","amount":"quantidade","an":"um/uma","analysis":"análise","analyze":"analisar","ancient":"antigo","and":"e","anger":"raiva","angle":"ângulo","animal":"animal","announcement":"anúncio","another":"outro","answer":"resposta","any":"qualquer","anything":"qualquer coisa","anyway":"de qualquer forma","apart":"separado","apparently":"aparentemente","appeal":"apelo","appear":"aparecer","appearance":"aparência","application":"aplicação","approach":"abordagem","appropriate":"adequado","approval":"aprovação","approximate":"aproximado","aquarium":"aquário","archaeologist":"arqueólogo","architecture":"arquitetura","archive":"arquivo","area":"área","argue":"argumentar","argument":"argumento","around":"ao redor","arrange":"organizar","arrest":"prender","art":"arte","article":"artigo","artifact":"artefato","artificial":"artificial","artist":"artista","arts":"artes","as":"como","aside":"de lado","ask":"perguntar","asleep":"dormindo","assessment":"avaliação","assignment":"tarefa","assistant":"assistente","associate":"associar","atmosphere":"atmosfera","attach":"anexar","attack":"atacar","attempt":"tentativa","attend":"assistir","attendance":"presença","attention":"atenção","attitude":"atitude","attract":"atrair","audience":"público","author":"autor","authority":"autoridade","available":"disponível","average":"média","avoid":"evitar","awareness":"consciência","away":"longe","awkward":"desajeitado","baby":"bebê","back":"costas/voltar","backroom":"sala dos fundos","bacteria":"bactérias","bad":"ruim","bag":"bolsa","balance":"equilíbrio","bank":"banco","base":"base","baseline":"linha de base","basic":"básico","basis":"base/fundamento","be":"ser/estar","beach":"praia","because":"porque","become":"tornar-se","bed":"cama","bee":"abelha","before":"antes","begin":"começar","beginning":"início","behavior":"comportamento","behind":"atrás","being":"ser/sendo","believe":"acreditar","beneficial":"benéfico","beneficiary":"beneficiário","best":"melhor","better":"melhor","between":"entre","beyond":"além","big":"grande","bill":"conta/nota","biological":"biológico","biology":"biologia","bird":"pássaro","birth":"nascimento","black":"preto","blue":"azul","board":"conselho/placa","boarding":"embarque","boat":"barco","body":"corpo","book":"livro","bored":"entediado","born":"nascido","borrow":"emprestar","both":"ambos","bottle":"garrafa","bottom":"fundo","boundary":"limite","boy":"menino","branch":"ramo","break":"quebrar/pausa","breath":"respiração","bribe":"suborno","bring":"trazer","broken":"quebrado","budget":"orçamento","building":"prédio","built":"construído","bus":"ônibus","business":"negócio","busy":"ocupado","but":"mas","buyer":"comprador","by":"por/pelo","cabin":"cabine","call":"chamar/ligar","camera":"câmera","camp":"acampamento","campus":"campus","can":"poder/lata","cancel":"cancelar","candidate":"candidato","carbon":"carbono","care":"cuidar","career":"carreira","careful":"cuidadoso","carry":"carregar","case":"caso","castle":"castelo","cat":"gato","cause":"causar/causa","celebrate":"celebrar","cell":"célula","center":"centro","century":"século","certain":"certo","certainly":"certamente","chain":"corrente","challenge":"desafio","change":"mudar/mudança","chapter":"capítulo","charge":"cobrar/carga","chart":"gráfico","check":"verificar","chemistry":"química","child":"criança","choose":"escolher","circle":"círculo","city":"cidade","civil":"civil","civilization":"civilização","claim":"afirmar","class":"aula/classe","classroom":"sala de aula","clerk":"funcionário","click":"clicar","climate":"clima","climb":"escalar","clinic":"clínica","clock":"relógio","close":"fechar/perto","closure":"fechamento","coffee":"café","cold":"frio","collaboration":"colaboração","collection":"coleção","college":"faculdade","color":"cor","combination":"combinação","come":"vir","comfortable":"confortável","comic":"cômico","command":"comando","commissioner":"comissário","commitment":"comprometimento","committee":"comitê","common":"comum","communication":"comunicação","community":"comunidade","company":"empresa","compare":"comparar","comparison":"comparação","compete":"competir","competitive":"competitivo","complex":"complexo","complicate":"complicar","compose":"compor","compound":"composto","computer":"computador","concept":"conceito","concert":"concerto","conclude":"concluir","conclusion":"conclusão","concrete":"concreto","condition":"condição","conduct":"conduzir","conference":"conferência","confirm":"confirmar","confrontation":"confronto","connection":"conexão","conscious":"consciente","conservation":"conservação","consider":"considerar","consist":"consistir","constant":"constante","constantly":"constantemente","constitute":"constituir","constitution":"constituição","construction":"construção","consult":"consultar","consume":"consumir","contain":"conter","content":"conteúdo","context":"contexto","continent":"continente","continue":"continuar","continuous":"contínuo","control":"controlar","controversy":"controvérsia","convenient":"conveniente","conversation":"conversa","cook":"cozinhar","copy":"cópia/copiar","core":"núcleo","corner":"canto","corporate":"corporativo","correct":"correto","cost":"custo","could":"poderia","counter":"balcão","country":"país","couple":"casal/par","course":"curso","court":"tribunal","cover":"cobrir/capa","craft":"artesanato","create":"criar","creative":"criativo","creature":"criatura","criminal":"criminoso","crisis":"crise","critic":"crítico","critical":"crítico","criticism":"crítica","crop":"colheita","cross":"cruzar","crucial":"crucial","curriculum":"currículo","customer":"cliente","cut":"cortar","dance":"dançar/dança","data":"dados","date":"data","day":"dia","dead":"morto","deal":"negócio/lidar","dear":"querido","death":"morte","debate":"debate","debt":"dívida","decade":"década","decide":"decidir","decision":"decisão","declare":"declarar","decrease":"diminuir","deep":"profundo","define":"definir","degree":"grau","delay":"atrasar","deliberate":"deliberado","delicate":"delicado","deliver":"entregar","demand":"exigir/demanda","democracy":"democracia","department":"departamento","depend":"depender","depending":"dependendo","depth":"profundidade","derive":"derivar","design":"design/projetar","designer":"designer","desire":"desejo","desk":"mesa","despite":"apesar de","destroy":"destruir","determine":"determinar","develop":"desenvolver","device":"dispositivo","diagram":"diagrama","difference":"diferença","different":"diferente","difficult":"difícil","digital":"digital","dimension":"dimensão","dioxide":"dióxido","direction":"direção","directly":"diretamente","director":"diretor","disappear":"desaparecer","disappoint":"desapontar","discipline":"disciplina","discover":"descobrir","discount":"desconto","discourage":"desencorajar","discuss":"discutir","discussion":"discussão","disease":"doença","disorganized":"desorganizado","distance":"distância","distinct":"distinto","distribute":"distribuir","disturbing":"perturbador","diverse":"diverso","divide":"dividir","do":"fazer","doctor":"médico","document":"documento","does":"faz","dog":"cachorro","door":"porta","double":"dobro","down":"baixo","download":"baixar","dozen":"dúzia","drawing":"desenho","drink":"beber/bebida","drive":"dirigir","driven":"movido","during":"durante","dust":"poeira","each":"cada","early":"cedo","earth":"terra","easier":"mais fácil","easily":"facilmente","east":"leste","easy":"fácil","eat":"comer","economic":"econômico","economics":"economia","economy":"economia","edge":"borda","editing":"edição","education":"educação","effect":"efeito","efficiency":"eficiência","effort":"esforço","either":"ou/também","elaborate":"elaborar","election":"eleição","elective":"eletivo","element":"elemento","else":"outro/mais","email":"e-mail","emerge":"emergir","emphasis":"ênfase","emphasize":"enfatizar","empire":"império","employment":"emprego","empty":"vazio","enable":"permitir","encourage":"encorajar","end":"fim","enemy":"inimigo","energy":"energia","engage":"engajar","engine":"motor","engineering":"engenharia","enhance":"melhorar","enjoy":"aproveitar","enormous":"enorme","enough":"suficiente","ensure":"garantir","enter":"entrar","entertainment":"entretenimento","entire":"inteiro","environment":"meio ambiente","equality":"igualdade","equipment":"equipamento","era":"era","error":"erro","essay":"redação","essential":"essencial","establish":"estabelecer","estate":"propriedade","estimate":"estimar","etc":"etc","Europe":"Europa","even":"mesmo/ainda","event":"evento","ever":"já/sempre","every":"todo","everyone":"todos","evidence":"evidência","exact":"exato","exactly":"exatamente","exam":"prova","examination":"exame","example":"exemplo","excel":"se destacar","except":"exceto","exception":"exceção","exchange":"troca","exclusive":"exclusivo","exercise":"exercício","exhibit":"exibir","exist":"existir","expect":"esperar","expedition":"expedição","expensive":"caro","experience":"experiência","experiment":"experimento","expert":"especialista","explain":"explicar","explosion":"explosão","export":"exportar","extensive":"extenso","extremely":"extremamente","eye":"olho","fabric":"tecido","face":"rosto","facilitate":"facilitar","facility":"instalação","fact":"fato","faculty":"corpo docente","fail":"falhar","failure":"fracasso","fall":"cair/outono","familiar":"familiar","far":"longe","farm":"fazenda","farmer":"fazendeiro","farming":"agricultura","fast":"rápido","fat":"gordo","fear":"medo","feature":"característica","feed":"alimentar","feedback":"feedback","feel":"sentir","feeling":"sentimento","female":"feminino","fertilizer":"fertilizante","few":"poucos","fiction":"ficção","field":"campo","fight":"lutar","figure":"figura","file":"arquivo","fill":"preencher","film":"filme","final":"final","finance":"finanças","financial":"financeiro","find":"encontrar","fine":"bom/multa","finger":"dedo","finish":"terminar","firm":"empresa/firme","first":"primeiro","fish":"peixe","five":"cinco","floor":"chão/andar","fly":"voar","focus":"foco","folk":"povo","follow":"seguir","following":"seguinte","food":"comida","football":"futebol","force":"força","forecast":"previsão","foreign":"estrangeiro","form":"forma","formal":"formal","former":"antigo","foundation":"fundação","found":"fundou","four":"quatro","fraction":"fração","frame":"moldura","free":"livre","freedom":"liberdade","frequent":"frequente","fresh":"fresco","friend":"amigo","friendly":"amigável","from":"de","front":"frente","fruit":"fruta","fuel":"combustível","full":"cheio","fun":"diversão","function":"função","fund":"fundo","game":"jogo","gas":"gás","gate":"portão","general":"geral","generally":"geralmente","generation":"geração","geography":"geografia","geological":"geológico","get":"obter/pegar","girl":"menina","give":"dar","glass":"vidro/copo","global":"global","go":"ir","gold":"ouro","good":"bom","government":"governo","graduate":"formado","grant":"bolsa/conceder","graph":"gráfico","grass":"grama","gravity":"gravidade","great":"ótimo","green":"verde","ground":"chão/terra","group":"grupo","grow":"crescer","growth":"crescimento","guard":"guarda","guess":"adivinhar","guest":"convidado","guide":"guia","habit":"hábito","habitat":"habitat","half":"metade","hall":"corredor","hand":"mão","handout":"material","happen":"acontecer","happy":"feliz","hard":"duro/difícil","hardly":"dificilmente","harm":"dano","harmful":"prejudicial","have":"ter","he":"ele","head":"cabeça","health":"saúde","healthy":"saudável","hear":"ouvir","heart":"coração","heat":"calor","heavy":"pesado","hello":"olá","help":"ajuda","helpful":"prestativo","her":"ela/dela","here":"aqui","herself":"ela mesma","hi":"oi","hidden":"escondido","high":"alto","him":"ele/o","himself":"ele mesmo","his":"dele","historian":"historiador","history":"história","hit":"bater","hold":"segurar","home":"casa","homework":"dever de casa","horizontal":"horizontal","horse":"cavalo","hospital":"hospital","host":"anfitrião","hot":"quente","hotel":"hotel","hour":"hora","house":"casa","how":"como","however":"no entanto","huge":"enorme","human":"humano","hydrogen":"hidrogênio","ice":"gelo","idea":"ideia","identify":"identificar","if":"se","ignore":"ignorar","illness":"doença","immediate":"imediato","important":"importante","impose":"impor","improve":"melhorar","in":"em","include":"incluir","income":"renda","increase":"aumentar","incredible":"incrível","independent":"independente","indicate":"indicar","individual":"individual","industrial":"industrial","industry":"indústria","inevitable":"inevitável","information":"informação","infrastructure":"infraestrutura","initial":"inicial","injury":"lesão","input":"entrada","insect":"inseto","inside":"dentro","instance":"instância","institution":"instituição","instruction":"instrução","instructor":"instrutor","insurance":"seguro","integrate":"integrar","intelligence":"inteligência","interest":"interesse","interested":"interessado","interesting":"interessante","international":"internacional","internet":"internet","internship":"estágio","interpretation":"interpretação","into":"em/dentro","introduce":"apresentar","introduction":"introdução","invest":"investir","investment":"investimento","involve":"envolver","iron":"ferro","is":"é","island":"ilha","issue":"questão","it":"isso","item":"item","its":"seu/sua","itself":"ele mesmo","job":"emprego","join":"juntar","journal":"periódico","journalism":"jornalismo","judge":"juiz","jump":"pular","just":"apenas","keep":"manter","key":"chave","kind":"tipo/gentil","kitchen":"cozinha","know":"saber","label":"rótulo","labor":"trabalho","laboratory":"laboratório","lack":"falta","land":"terra/pousar","language":"idioma","large":"grande","last":"último","late":"tarde","launch":"lançar","law":"lei","lawyer":"advogado","lead":"liderar","learn":"aprender","leave":"sair","lecture":"aula/palestra","left":"esquerda","leg":"perna","legal":"legal","leisure":"lazer","lend":"emprestar","less":"menos","lesson":"lição","let":"deixar","letter":"carta","level":"nível","library":"biblioteca","life":"vida","lift":"levantar","light":"luz/leve","like":"gostar/como","line":"linha","linguist":"linguista","linguistics":"linguística","link":"link","list":"lista","listen":"ouvir","listening":"escuta","literature":"literatura","little":"pequeno","live":"viver","load":"carregar","loan":"empréstimo","local":"local","lock":"trancar","logo":"logo","long":"longo","look":"olhar","lose":"perder","lot":"muito","love":"amor","low":"baixo","lunch":"almoço","lunchroom":"refeitório","machine":"máquina","made":"feito","main":"principal","maintain":"manter","major":"principal/maior","make":"fazer","male":"masculino","man":"homem","management":"gestão","manager":"gerente","many":"muitos","marine":"marinho","mark":"marca","market":"mercado","marketing":"marketing","mass":"massa","master":"mestre","material":"material","mathematics":"matemática","mature":"maduro","maximum":"máximo","may":"poder/maio","me":"me/mim","meal":"refeição","mean":"significar","meaning":"significado","measure":"medir","meat":"carne","media":"mídia","medical":"médico","medicine":"medicina","meet":"encontrar","meeting":"reunião","melt":"derreter","member":"membro","mention":"mencionar","method":"método","midday":"meio-dia","might":"poder","migration":"migração","military":"militar","milk":"leite","mind":"mente","minimum":"mínimo","minute":"minuto","miss":"sentir falta","missing":"desaparecido","mistake":"erro","mix":"misturar","mobile":"celular","model":"modelo","modern":"moderno","module":"módulo","moment":"momento","momentum":"momento linear","money":"dinheiro","month":"mês","morning":"manhã","most":"mais","mother":"mãe","mountain":"montanha","move":"mover","movement":"movimento","movie":"filme","much":"muito","multiple":"múltiplo","muscle":"músculo","museum":"museu","music":"música","must":"deve","my":"meu/minha","myself":"eu mesmo","name":"nome","narrow":"estreito","nation":"nação","natural":"natural","nature":"natureza","near":"perto","nearly":"quase","necessary":"necessário","need":"precisar","negative":"negativo","nervous":"nervoso","never":"nunca","new":"novo","news":"notícias","newspaper":"jornal","next":"próximo","nice":"agradável","night":"noite","nitrogen":"nitrogênio","no":"não","none":"nenhum","normal":"normal","north":"norte","not":"não","note":"nota","nothing":"nada","notice":"notar","novel":"romance","novelist":"romancista","now":"agora","nuclear":"nuclear","number":"número","numerous":"numeroso","nurse":"enfermeiro","object":"objeto","observation":"observação","observe":"observar","observer":"observador","obtain":"obter","obvious":"óbvio","obviously":"obviamente","ocean":"oceano","of":"de","off":"fora","offer":"oferta","office":"escritório","officer":"oficial","often":"frequentemente","oh":"oh","ok":"ok","old":"velho","on":"em/sobre","once":"uma vez","one":"um","only":"apenas","open":"abrir","opening":"abertura","operate":"operar","opinion":"opinião","opportunity":"oportunidade","option":"opção","optional":"opcional","or":"ou","orange":"laranja","order":"ordem","organization":"organização","organize":"organizar","original":"original","other":"outro","otherwise":"caso contrário","our":"nosso","out":"fora","outcome":"resultado","outline":"esboço","output":"saída","outside":"fora","over":"sobre","overall":"geral","overview":"visão geral","own":"próprio","oxygen":"oxigênio","pace":"ritmo","packaging":"embalagem","page":"página","paper":"papel","parent":"pai/mãe","part":"parte","participate":"participar","particular":"particular","particularly":"particularmente","partner":"parceiro","party":"festa","pass":"passar","passport":"passaporte","past":"passado","pattern":"padrão","pay":"pagar","payment":"pagamento","people":"pessoas","per":"por","percent":"porcentagem","perfect":"perfeito","perform":"realizar","performance":"desempenho","perhaps":"talvez","period":"período","person":"pessoa","personal":"pessoal","phone":"telefone","photo":"foto","photography":"fotografia","physical":"físico","pick":"pegar","picture":"imagem","pie":"torta","piece":"peça","place":"lugar","plan":"plano","planned":"planejado","plant":"planta","plastic":"plástico","play":"jogar","please":"por favor","point":"ponto","policy":"política","political":"político","pollution":"poluição","popular":"popular","portion":"porção","position":"posição","positive":"positivo","possible":"possível","post":"cargo/postar","postgraduate":"pós-graduado","power":"poder","practical":"prático","practice":"praticar","precious":"precioso","precisely":"precisamente","predict":"prever","preparation":"preparação","prepare":"preparar","present":"presente","president":"presidente","press":"imprensa","pressure":"pressão","prestigious":"prestigioso","prevent":"prevenir","previous":"anterior","price":"preço","primary":"primário","principle":"princípio","private":"privado","probably":"provavelmente","problem":"problema","procedure":"procedimento","process":"processo","produce":"produzir","product":"produto","profession":"profissão","professor":"professor","program":"programa","project":"projeto","promise":"promessa","promote":"promover","promptly":"prontamente","proof":"prova","proportion":"proporção","prosperity":"prosperidade","prove":"provar","provide":"fornecer","public":"público","publication":"publicação","publish":"publicar","pull":"puxar","purity":"pureza","purpose":"propósito","pursue":"perseguir","push":"empurrar","put":"colocar","qualification":"qualificação","qualify":"qualificar","quality":"qualidade","quantity":"quantidade","quarter":"trimestre","question":"pergunta","quick":"rápido","quiet":"quieto","quite":"bastante","radio":"rádio","rain":"chuva","raise":"levantar","range":"faixa","rank":"classificação","rapid":"rápido","rate":"taxa","rather":"em vez","raw":"bruto","reach":"alcançar","read":"ler","ready":"pronto","real":"real","really":"realmente","reason":"razão","recall":"lembrar","receive":"receber","reception":"recepção","recent":"recente","recognize":"reconhecer","record":"gravar","red":"vermelho","reduce":"reduzir","refer":"referir","reference":"referência","reflect":"refletir","regard":"considerar","register":"registrar","regular":"regular","relate":"relacionar","relationship":"relacionamento","relative":"relativo","release":"lançar","relevant":"relevante","remain":"permanecer","remember":"lembrar","remove":"remover","rent":"aluguel","repeat":"repetir","replace":"substituir","reply":"responder","report":"relatório","represent":"representar","republic":"república","request":"pedido","require":"exigir","research":"pesquisa","researcher":"pesquisador","resource":"recurso","respect":"respeito","responsibility":"responsabilidade","rest":"descanso","result":"resultado","return":"retornar","revolution":"revolução","rice":"arroz","rich":"rico","ride":"andar","right":"direito/correto","rigorous":"rigoroso","rise":"subir","risk":"risco","river":"rio","road":"estrada","rock":"rocha","role":"papel","room":"quarto","rule":"regra","rural":"rural","sad":"triste","safe":"seguro","same":"mesmo","sample":"amostra","say":"dizer","scale":"escala","school":"escola","science":"ciência","scientific":"científico","scientist":"cientista","screen":"tela","sea":"mar","season":"estação","second":"segundo","section":"seção","security":"segurança","see":"ver","seek":"buscar","seem":"parecer","select":"selecionar","self":"si mesmo","semester":"semestre","send":"enviar","sense":"sentido","sentence":"frase","separate":"separar","series":"série","serious":"sério","serve":"servir","service":"serviço","set":"conjunto","several":"vários","share":"compartilhar","she":"ela","shift":"turno","ship":"navio","shipwreck":"naufrágio","shock":"choque","shop":"loja","short":"curto","should":"deveria","show":"mostrar","side":"lado","sign":"sinal","significant":"significativo","similar":"similar","simple":"simples","simply":"simplesmente","since":"desde","single":"único","skill":"habilidade","sleep":"dormir","slide":"slide","slight":"leve","slow":"lento","small":"pequeno","smart":"inteligente","so":"então","social":"social","society":"sociedade","soft":"suave","software":"software","soil":"solo","solar":"solar","some":"alguns","someone":"alguém","something":"algo","sometimes":"às vezes","son":"filho","soon":"em breve","sort":"tipo","sound":"som","source":"fonte","south":"sul","space":"espaço","speak":"falar","special":"especial","species":"espécie","specific":"específico","speed":"velocidade","stage":"palco/fase","stair":"escada","stand":"ficar de pé","standard":"padrão","star":"estrela","start":"começar","state":"estado","station":"estação","stationery":"papelaria","statistical":"estatístico","statistics":"estatísticas","stay":"ficar","steam":"vapor","step":"passo","still":"ainda","stock":"estoque","stop":"parar","storage":"armazenamento","store":"loja","storm":"tempestade","story":"história","straight":"reto","strange":"estranho","strategy":"estratégia","street":"rua","stress":"estresse","stretch":"esticar","strict":"estrito","strong":"forte","structure":"estrutura","struggle":"luta","student":"estudante","study":"estudar","style":"estilo","subject":"assunto","submission":"submissão","submit":"submeter","success":"sucesso","successful":"bem-sucedido","such":"tal","sudden":"repentino","sugar":"açúcar","suggest":"sugerir","summer":"verão","sun":"sol","supply":"fornecer","support":"apoio","sure":"certeza","surprise":"surpresa","surround":"cercar","survive":"sobreviver","system":"sistema","table":"mesa","take":"pegar","talk":"conversar","tap":"torneira","task":"tarefa","tax":"imposto","tea":"chá","teach":"ensinar","teacher":"professor","team":"equipe","technology":"tecnologia","teenager":"adolescente","telephone":"telefone","television":"televisão","tell":"contar","temperature":"temperatura","term":"prazo/termo","test":"teste","than":"do que","thank":"agradecer","that":"que","the":"o/a","their":"deles","them":"eles","themselves":"eles mesmos","then":"então","theory":"teoria","there":"lá","these":"estes","they":"eles","thick":"grosso","thin":"fino","thing":"coisa","think":"pensar","third":"terceiro","this":"este","those":"aqueles","though":"embora","thought":"pensamento","thousand":"mil","three":"três","through":"através","throughout":"por todo","throw":"jogar","thus":"assim","ticket":"bilhete","time":"tempo","to":"para","today":"hoje","together":"juntos","tomorrow":"amanhã","tone":"tom","too":"também","took":"pegou","tool":"ferramenta","top":"topo","topic":"tópico","total":"total","touch":"tocar","toward":"em direção","town":"cidade","track":"trilha","trade":"comércio","traditional":"tradicional","traffic":"trânsito","train":"trem/treinar","training":"treinamento","transfer":"transferir","travel":"viajar","treat":"tratar","treatment":"tratamento","tree":"árvore","trial":"julgamento","trip":"viagem","tropical":"tropical","trouble":"problema","true":"verdadeiro","truth":"verdade","try":"tentar","tube":"tubo","Tuesday":"terça-feira","turn":"virar","tutor":"tutor","tutorial":"tutorial","two":"dois","type":"tipo","typical":"típico","unable":"incapaz","under":"sob","understand":"entender","unexpected":"inesperado","unfortunately":"infelizmente","unit":"unidade","university":"universidade","unless":"a menos que","unlike":"diferente de","unlikely":"improvável","unnecessary":"desnecessário","until":"até","up":"cima","update":"atualizar","upon":"sobre","urban":"urbano","urge":"urgir","us":"nos","use":"usar","useful":"útil","usual":"usual","vacation":"férias","vacuum":"vácuo","valuable":"valioso","value":"valor","various":"vários","vast":"vasto","vegetable":"vegetal","vehicle":"veículo","very":"muito","view":"vista","village":"vila","violence":"violência","virtual":"virtual","virus":"vírus","visit":"visitar","vital":"vital","vocabulary":"vocabulário","voice":"voz","volume":"volume","wait":"esperar","walk":"caminhar","wall":"parede","want":"querer","warm":"quente","warn":"avisar","wash":"lavar","waste":"desperdício","watch":"assistir","water":"água","wave":"onda","way":"caminho","we":"nós","weak":"fraco","wealth":"riqueza","wear":"vestir","weather":"clima","web":"web","website":"site","week":"semana","weight":"peso","welcome":"boas-vindas","well":"bem","west":"oeste","what":"o que","when":"quando","where":"onde","whether":"se","which":"qual","while":"enquanto","white":"branco","who":"quem","whole":"inteiro","why":"por que","wide":"largo","wife":"esposa","will":"irá","win":"ganhar","wind":"vento","window":"janela","winter":"inverno","wish":"desejo","with":"com","within":"dentro de","without":"sem","woman":"mulher","wonder":"maravilha","word":"palavra","work":"trabalhar","worker":"trabalhador","workshop":"oficina","world":"mundo","worry":"preocupar","worth":"valor","would":"iria","write":"escrever","writing":"escrita","wrong":"errado","year":"ano","yes":"sim","yesterday":"ontem","yet":"ainda","you":"você","young":"jovem","your":"seu/sua","yourself":"você mesmo"
+};
+
+const ALL_WORDS = Object.keys(TR);
+const WORDS_PER_DAY = 100;
+const DAYS_WORDS = [];
+
+for (let i = 0; i < ALL_WORDS.length; i += WORDS_PER_DAY) {
+  DAYS_WORDS.push(ALL_WORDS.slice(i, i + WORDS_PER_DAY));
+}
+
+const DAYS_COUNT = DAYS_WORDS.length;
+const DAY_COLORS = ['#FF6B6B', '#FFB347', '#4ECDC4', '#45B7D1', '#96CEB4', '#DDA0DD', '#FFD600', '#E040FB', '#00E676', '#448AFF', '#FF1744', '#FF9800', '#9C27B0', '#3F51B5', '#009688'];
+
+const CIRCUMFERENCE = 2 * Math.PI * 60;
+
+function shuffle(a) {
+  const b = [...a];
+  for (let i = b.length-1; i > 0; i--) {
+    const j = Math.floor(Math.random()*(i+1));
+    [b[i],b[j]] = [b[j],b[i]];
+  }
+  return b;
+}
+
+// CONTADOR DE REPETIÇÕES (quantas vezes usou REPETIR 5x)
+let repeticoesCount = new Map();
+
+try {
+  const savedReps = localStorage.getItem('w30reps');
+  if (savedReps) repeticoesCount = new Map(JSON.parse(savedReps));
+} catch(e) { console.log(e); }
+
+function saveReps() { try{localStorage.setItem('w30reps',JSON.stringify([...repeticoesCount]));}catch(e){} }
+
+let known = new Set();
+let sessionResults = new Map();
+let wordErrors = new Map();
+let cfg = { time:30, tip:'pron', ord:'random', spd:'normal', timerEnd:'keep', rigor:75, slowSpeed:0.7 };
+try { 
+  const saved = localStorage.getItem('w30k');
+  if (saved) known = new Set(JSON.parse(saved));
+  const savedErrors = localStorage.getItem('w30errors');
+  if (savedErrors) wordErrors = new Map(JSON.parse(savedErrors));
+} catch(e) { console.log(e); }
+try { 
+  const saved = localStorage.getItem('w30c');
+  if (saved) cfg = {...cfg, ...JSON.parse(saved)};
+} catch(e) { console.log(e); }
+
+function saveK() { try{localStorage.setItem('w30k',JSON.stringify([...known]));}catch(e){} }
+function saveErrors() { try{localStorage.setItem('w30errors',JSON.stringify([...wordErrors]));}catch(e){} }
+function saveC() { try{localStorage.setItem('w30c',JSON.stringify(cfg));}catch(e){} }
+
+let currentDay = -1;
+let queue = [], qIdx = 0;
+let timerSec = 30, timerIv = null, isVerified = false;
+let scOk = 0, scPar = 0, scErr = 0;
+
+let recognition = null;
+let voiceMatchResult = null;
+let voiceCurrentWord = '';
+
+const SPD = { slow:cfg.slowSpeed || 0.7, normal:0.88, fast:1.1 };
+
+// ============================================
+// LISTA DE EMOJIS PARA HASH ÚNICO
+// ============================================
+const EMOJI_LIST = [
+  '😀', '😃', '😄', '😁', '😆', '😅', '😂', '🤣', '🥲', '☺️', '😊', '😇', '🙂', '🙃', '😉', '😌', '😍', '🥰', '😘', '😗', '😙', '😚', '😋', '😛', '😝', '😜', '🤪', '🤨', '🧐', '🤓', '😎', '🥸', '🤩', '🥳', '😏', '😒', '😞', '😔', '😟', '😕', '🙁', '☹️', '😣', '😖', '😫', '😩', '🥺', '😢', '😭', '😤', '😠', '😡', '🤬', '🤯', '😳', '🥵', '🥶', '😱', '😨', '😰', '😥', '😓', '🤗', '🤔', '🤭', '🤫', '🤥', '😶', '😐', '😑', '😬', '🙄', '😯', '😦', '😧', '😮', '😲', '🥱', '😴', '🤤', '😪', '😵', '🤐', '🥴', '🤑', '🤮', '🤧', '😷', '🤒', '🤕', '🤑', '🤠', '😈', '👿', '👹', '👺', '🤡', '💩', '👻', '💀', '☠️', '👽', '👾', '🤖', '🎃', '😺', '😸', '😹', '😻', '😼', '😽', '🙀', '😿', '😾', '🙈', '🙉', '🙊', '🐵', '🐒', '🐶', '🐕', '🦮', '🐩', '🐺', '🦊', '🦝', '🐱', '🐈', '🐈⬛', '🦁', '🐯', '🐅', '🐆', '🐴', '🐎', '🦄', '🦓', '🦌', '🐮', '🐄', '🐂', '🐃', '🐷', '🐖', '🐗', '🐽', '🐏', '🐑', '🐐', '🐪', '🐫', '🦙', '🦒', '🐘', '🦣', '🦏', '🦛', '🐭', '🐁', '🐀', '🐹', '🐰', '🐇', '🐿️', '🦫', '🦔', '🦇', '🐻', '🐻‍❄️', '🐨', '🐼', '🦥', '🦦', '🦨', '🦘', '🦡', '🐾', '🦃', '🐔', '🐓', '🐣', '🐤', '🐥', '🐦', '🐧', '🕊️', '🦅', '🦆', '🦢', '🦉', '🦩', '🦚', '🦜', '🐸', '🐊', '🐢', '🦎', '🐍', '🐲', '🐉', '🦕', '🦖', '🐳', '🐋', '🐬', '🐟', '🐠', '🐡', '🦈', '🐙', '🐚', '🐌', '🦋', '🐛', '🐜', '🐝', '🐞', '🦗', '🕷️', '🦂', '🦟', '🦠', '💐', '🌸', '💮', '🏵️', '🌹', '🥀', '🌺', '🌻', '🌼', '🌷', '🌱', '🌿', '🍀', '🍁', '🍂', '🍃', '🍇', '🍈', '🍉', '🍊', '🍋', '🍌', '🍍', '🥭', '🍎', '🍏', '🍐', '🍑', '🍒', '🍓', '🥝', '🍅', '🥥', '🥑', '🍆', '🥔', '🥕', '🌽', '🌶️', '🥒', '🥬', '🥦', '🧄', '🧅', '🍄', '🥜', '🌰', '🍞', '🥐', '🥖', '🥨', '🥯', '🥞', '🧇', '🧀', '🍖', '🍗', '🥩', '🥓', '🍔', '🍟', '🍕', '🌭', '🥪', '🌮', '🌯', '🫔', '🥙', '🧆', '🥚', '🍳', '🥘', '🍲', '🫕', '🥣', '🥗', '🍿', '🧈', '🧂', '🥫', '🍱', '🍘', '🍙', '🍚', '🍛', '🍜', '🍝', '🍠', '🍢', '🍣', '🍤', '🍥', '🥮', '🍡', '🥟', '🥠', '🥡', '🦀', '🦞', '🦐', '🦑', '🐙', '🍦', '🍧', '🍨', '🍩', '🍪', '🎂', '🍰', '🧁', '🥧', '🍫', '🍬', '🍭', '🍮', '🍯', '🥛', '☕', '🫖', '🍵', '🍶', '🍾', '🍷', '🍸', '🍹', '🍺', '🍻', '🥂', '🥃', '🥤', '🧃', '🧉', '🧊', '🥢', '🍽️', '🍴', '🥄', '🔪', '🏺', '🎋', '🎍', '🎎', '🎏', '🎐', '🎑', '🧧', '🎀', '🎁', '🎗️', '🎟️', '🎫', '🎖️', '🏆', '🏅', '🥇', '🥈', '🥉', '⚽', '🏀', '🏈', '⚾', '🥎', '🎾', '🏐', '🏉', '🥏', '🎱', '🪀', '🏓', '🏸', '🏒', '🏑', '🥍', '🏏', '🪃', '🥅', '⛳', '🪁', '🏹', '🎣', '🤿', '🥊', '🥋', '🎽', '🛹', '🛼', '🛷', '⛸️', '🥌', '🎿', '⛷️', '🏂', '🪂', '🏋️', '🤼', '🤸', '⛹️', '🤾', '🏌️', '🏇', '🧘', '🏄', '🏊', '🤽', '🚣', '🧗', '🚵', '🚴', '🏆', '🥇', '🥈', '🥉', '🏅', '🎖️', '🏵️'
+];
+
+// Cache de ícones baseado em hash da palavra
+let wordIconCache = new Map();
+
+try {
+  const savedIconCache = localStorage.getItem('w30icons');
+  if (savedIconCache) wordIconCache = new Map(JSON.parse(savedIconCache));
+} catch(e) { console.log(e); }
+
+function saveIconCache() { try{localStorage.setItem('w30icons',JSON.stringify([...wordIconCache]));}catch(e){} }
+
+function getUniqueIconForWord(word) {
+  // Se já tem ícone cacheado, retorna
+  if (wordIconCache.has(word)) {
+    return wordIconCache.get(word);
+  }
+  
+  // Gera um hash único baseado na palavra
+  let hash = 0;
+  for (let i = 0; i < word.length; i++) {
+    hash = ((hash << 5) - hash) + word.charCodeAt(i);
+    hash = hash & hash; // Converte para 32-bit integer
+  }
+  
+  // Usa o valor absoluto do hash para índice
+  const index = Math.abs(hash) % EMOJI_LIST.length;
+  const icon = EMOJI_LIST[index];
+  
+  // Armazena no cache
+  wordIconCache.set(word, icon);
+  saveIconCache();
+  
+  return icon;
+}
+
+// ============================================
+// BOTÃO ANTERIOR - FUNCIONA EM QUALQUER MOMENTO
+// ============================================
+function previousWord() {
+  if (timerIv) stopTimer();
+  
+  if (qIdx > 0) {
+    qIdx--;
+  } else {
+    toast('⚠️ Você já está na primeira palavra!', 'info');
+    resetCurrentWordState();
+    return;
+  }
+  
+  resetCurrentWordState();
+  loadCurrentWord();
+}
+
+// ============================================
+// BOTÃO REFAZER 1x - FUNCIONA EM QUALQUER MOMENTO
+// ============================================
+function refazerPalavraAtual() {
+  if (!queue.length || qIdx >= queue.length) return;
+  
+  if (timerIv) stopTimer();
+  
+  resetCurrentWordState();
+  
+  setTimeout(() => {
+    if (queue[qIdx]) speak(queue[qIdx], SPD.normal);
+  }, 100);
+  
+  toast(`🔄 Refazendo a palavra atual 1 vez!`, 'info');
+}
+
+// ============================================
+// BOTÃO REFAZER 5 CICLOS COMPLETOS
+// ============================================
+let ciclo5xAtivo = false;
+let ciclo5xStep = 0;
+let ciclo5xWord = '';
+
+function refazer5Ciclos() {
+  if (!queue.length || qIdx >= queue.length) return;
+  if (ciclo5xAtivo) {
+    toast('⚠️ Já está em modo de 5 ciclos! Complete ou recarregue a página.', 'info');
+    return;
+  }
+  
+  ciclo5xAtivo = true;
+  ciclo5xStep = 0;
+  ciclo5xWord = queue[qIdx];
+  
+  toast(`🔁 INICIANDO 5 CICLOS COMPLETOS para a palavra: "${ciclo5xWord}"`, 'info');
+  
+  function proximoCiclo() {
+    if (!ciclo5xAtivo) return;
+    if (ciclo5xStep >= 5) {
+      // Finalizou os 5 ciclos
+      toast(`✅ 5 CICLOS COMPLETOS! Palavra "${ciclo5xWord}" dominada! Avançando...`, 'ok');
+      ciclo5xAtivo = false;
+      // Avança para próxima palavra
+      if (timerIv) stopTimer();
+      if (qIdx + 1 >= queue.length) {
+        qIdx = 0;
+      } else {
+        qIdx++;
+      }
+      resetCurrentWordState();
+      loadCurrentWord();
+      return;
+    }
+    
+    ciclo5xStep++;
+    toast(`🔄 CICLO ${ciclo5xStep}/5 - Ouvindo e escrevendo...`, 'info');
+    
+    // Para timer atual se estiver rodando
+    if (timerIv) stopTimer();
+    
+    // Reseta o estado da palavra atual
+    isVerified = false;
+    
+    const inp = document.getElementById('write-input');
+    if (inp) {
+      inp.value = '';
+      inp.className = 'write-input';
+      inp.disabled = false;
+      inp.placeholder = 'Digite a palavra em inglês...';
+      inp.focus();
+    }
+    
+    const fbPanel = document.getElementById('fb-panel');
+    if (fbPanel) fbPanel.classList.remove('show');
+    
+    const verifyBtn = document.getElementById('verify-btn');
+    if (verifyBtn) {
+      verifyBtn.disabled = false;
+      verifyBtn.textContent = 'VERIFICAR ✓';
+    }
+    
+    const clearBtn = document.getElementById('clear-btn');
+    if (clearBtn) clearBtn.style.display = 'none';
+    
+    // Inicia timer
+    timerSec = cfg.time;
+    updateTimerUI();
+    startTimer();
+    
+    // Toca a palavra
+    setTimeout(() => {
+      if (queue[qIdx]) speak(queue[qIdx], SPD.normal);
+    }, 200);
+    
+    // Aguarda verificação e depois chama próximo ciclo
+    waitForVerificationAndContinue();
+  }
+  
+  function waitForVerificationAndContinue() {
+    const checkInterval = setInterval(() => {
+      if (isVerified === true) {
+        clearInterval(checkInterval);
+        setTimeout(() => {
+          if (ciclo5xAtivo) {
+            proximoCiclo();
+          }
+        }, 1500);
+      }
+    }, 500);
+  }
+  
+  proximoCiclo();
+}
+
+// ============================================
+// BOTÃO PRÓXIMA PALAVRA - FUNCIONA EM QUALQUER MOMENTO
+// ============================================
+function nextWord() {
+  if (ciclo5xAtivo) {
+    toast('⚠️ Modo 5 ciclos ativo! Complete os 5 ciclos primeiro.', 'info');
+    return;
+  }
+  
+  if (timerIv) stopTimer();
+  
+  if (qIdx + 1 >= queue.length) {
+    toast('🎉 Fim da lista! Voltando ao início...', 'ok');
+    qIdx = 0;
+  } else {
+    qIdx++;
+  }
+  
+  resetCurrentWordState();
+  loadCurrentWord();
+}
+
+// Função para REPETIR 5x com contagem
+function repeatWord5Times() {
+  if (!queue.length || qIdx >= queue.length) return;
+  const word = queue[qIdx];
+  
+  // Incrementa o contador de repetições para esta palavra
+  const currentCount = repeticoesCount.get(word) || 0;
+  repeticoesCount.set(word, currentCount + 1);
+  saveReps();
+  
+  let count = 0;
+  function speakNext() {
+    if (count >= 5) { toast(`🔁 Palavra repetida 5 vezes! (Total de repetições: ${currentCount + 1})`, 'ok'); return; }
+    speak(word, SPD.normal);
+    count++;
+    setTimeout(speakNext, 700);
+  }
+  toast(`🔁 Repetindo palavra 5 vezes...`, 'info');
+  speakNext();
+}
+
+function resetCurrentWordState() {
+  isVerified = false;
+  
+  const inp = document.getElementById('write-input');
+  if (inp) {
+    inp.value = '';
+    inp.className = 'write-input';
+    inp.disabled = false;
+    inp.placeholder = 'Digite a palavra em inglês...';
+    setTimeout(() => inp.focus(), 50);
+  }
+  
+  const fbPanel = document.getElementById('fb-panel');
+  if (fbPanel) fbPanel.classList.remove('show');
+  
+  const fpIcon = document.getElementById('fp-icon');
+  const fpWord = document.getElementById('fp-word');
+  const fpTranslationArea = document.getElementById('fp-translation-area');
+  const fpDiff = document.getElementById('fp-diff');
+  const fpTip = document.getElementById('fp-tip');
+  if (fpIcon) fpIcon.textContent = '—';
+  if (fpWord) fpWord.textContent = '—';
+  if (fpTranslationArea) fpTranslationArea.innerHTML = '';
+  if (fpDiff) fpDiff.innerHTML = '';
+  if (fpTip) fpTip.innerHTML = '';
+  
+  const verifyBtn = document.getElementById('verify-btn');
+  if (verifyBtn) {
+    verifyBtn.disabled = false;
+    verifyBtn.textContent = 'VERIFICAR ✓';
+  }
+  
+  const clearBtn = document.getElementById('clear-btn');
+  if (clearBtn) clearBtn.style.display = 'none';
+  
+  timerSec = cfg.time;
+  updateTimerUI();
+  startTimer();
+}
+
+function loadCurrentWord() {
+  if (!queue.length || qIdx >= queue.length) return;
+  
+  const word = queue[qIdx];
+  
+  const wnum = document.getElementById('wnum');
+  if (wnum) wnum.textContent = (qIdx+1) + ' / ' + queue.length;
+  
+  const wday = document.getElementById('wday');
+  if (wday) wday.textContent = currentDay === -1 ? `🎯 TODAS (${ALL_WORDS.length})` : `DIA ${currentDay+1}`;
+  
+  const inp = document.getElementById('write-input');
+  if (inp) {
+    inp.value = '';
+    inp.className = 'write-input';
+    inp.disabled = false;
+  }
+  
+  const fbPanel = document.getElementById('fb-panel');
+  if (fbPanel) fbPanel.classList.remove('show');
+  
+  startTimer();
+  
+  setTimeout(() => speak(word, SPD.normal), 200);
+  
+  try { if (inp) inp.focus(); } catch(e) {}
+}
+
+function startTimer() {
+  stopTimer();
+  timerIv = setInterval(tick, 1000);
+}
+
+function stopTimer() { if (timerIv) { clearInterval(timerIv); timerIv=null; } }
+
+function tick() {
+  if (isVerified) return;
+  timerSec--;
+  updateTimerUI();
+  if (timerSec <= 0) {
+    stopTimer();
+    if (cfg.timerEnd === 'reveal') verifyWord(true);
+  }
+}
+
+function updateTimerUI() {
+  const num = document.getElementById('r-num');
+  const arc = document.getElementById('r-arc');
+  const tf = document.getElementById('top-fill');
+  if (!num || !arc || !tf) return;
+  const t = Math.max(0, timerSec);
+  num.textContent = t;
+  num.classList.toggle('urgent', t <= 5);
+  arc.style.stroke = t<=5?'var(--red-neon)':t<=10?'#FF9800':'var(--gold)';
+  const pct = t / cfg.time;
+  arc.style.strokeDashoffset = CIRCUMFERENCE * (1-pct);
+  arc.style.strokeDasharray = CIRCUMFERENCE;
+  tf.style.width = (pct*100)+'%';
+  tf.style.background = t<=5?'var(--red-neon)':t<=10?'#FF9800':'var(--gold)';
+}
+
+function speak(word, rate) {
+  if (!word) return;
+  const r = rate || SPD.normal;
+  if (window.speechSynthesis) {
+    speechSynthesis.cancel();
+    setTimeout(() => {
+      const utterance = new SpeechSynthesisUtterance(word);
+      utterance.lang = 'en-US';
+      utterance.rate = r;
+      utterance.volume = 1;
+      speechSynthesis.speak(utterance);
+    }, 100);
+    return;
+  }
+  if (window.responsiveVoice) {
+    responsiveVoice.cancel();
+    responsiveVoice.speak(word, 'US English Female', {rate:r, volume:1});
+  }
+}
+
+function playWordNormal() { speak(queue[qIdx], SPD.normal); }
+function playWordSlow() { speak(queue[qIdx], cfg.slowSpeed); }
+
+function openSpeedModal() {
+  const modal = document.getElementById('speed-modal');
+  const slider = document.getElementById('speed-slider-modal');
+  if (slider) slider.value = cfg.slowSpeed;
+  updateSpeedModalValue(cfg.slowSpeed);
+  modal.classList.add('show');
+}
+
+function closeSpeedModal() { 
+  document.getElementById('speed-modal').classList.remove('show'); 
+}
+
+function updateSpeedModalValue(val) {
+  val = parseFloat(val);
+  const valDiv = document.getElementById('speed-modal-value');
+  if (valDiv) valDiv.textContent = val.toFixed(2) + 'x';
+  if (queue[qIdx]) speak(queue[qIdx], val);
+}
+
+function setSpeedModalPreset(val) {
+  const slider = document.getElementById('speed-slider-modal');
+  if (slider) slider.value = val;
+  updateSpeedModalValue(val);
+  cfg.slowSpeed = val;
+  SPD.slow = cfg.slowSpeed;
+  saveC();
+  toast(`Velocidade DEVAGAR ajustada para ${val.toFixed(2)}x`, 'info');
+}
+
+function setSlowSpeed(val) {
+  cfg.slowSpeed = parseFloat(val);
+  SPD.slow = cfg.slowSpeed;
+  const vDiv = document.getElementById('slow-speed-v');
+  if (vDiv) vDiv.textContent = cfg.slowSpeed.toFixed(2) + 'x';
+  const slider = document.getElementById('slow-speed-sl');
+  if (slider) slider.style.setProperty('--p', ((cfg.slowSpeed - 0.3) / 0.8 * 100) + '%');
+  saveC();
+}
+
+function setRigor(val) {
+  cfg.rigor = parseInt(val);
+  const vDiv = document.getElementById('rigor-v');
+  if (vDiv) vDiv.textContent = cfg.rigor + '%';
+  const slider = document.getElementById('rigor-sl');
+  if (slider) slider.style.setProperty('--p', ((cfg.rigor - 50) / 50 * 100) + '%');
+  saveC();
+}
+
+function openVoiceModal() {
+  if (!queue.length || qIdx >= queue.length) return;
+  voiceCurrentWord = queue[qIdx];
+  const modal = document.getElementById('voice-modal');
+  const statusDiv = document.getElementById('voice-status');
+  const heardDiv = document.getElementById('voice-heard');
+  const matchDiv = document.getElementById('voice-match');
+  if (statusDiv) statusDiv.textContent = '🎤 Falando... Fale a palavra claramente';
+  if (heardDiv) heardDiv.innerHTML = '';
+  if (matchDiv) matchDiv.innerHTML = '';
+  voiceMatchResult = null;
+  modal.classList.add('show');
+  if (!window.SpeechRecognition && !window.webkitSpeechRecognition) {
+    if (statusDiv) statusDiv.textContent = '❌ Seu navegador não suporta reconhecimento de voz';
+    return;
+  }
+  const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+  recognition = new SpeechRecognition();
+  recognition.lang = 'en-US';
+  recognition.interimResults = false;
+  recognition.maxAlternatives = 1;
+  recognition.onstart = function() {
+    if (statusDiv) statusDiv.textContent = '🎙️ Escutando... Fale agora!';
+  };
+  recognition.onresult = function(event) {
+    const spoken = event.results[0][0].transcript.toLowerCase().trim();
+    if (heardDiv) heardDiv.innerHTML = `Você disse: <strong style="color:var(--gold)">"${spoken}"</strong>`;
+    const correct = voiceCurrentWord.toLowerCase();
+    let matchPercent = 0;
+    let matchLength = 0;
+    for (let i = 0; i < Math.min(spoken.length, correct.length); i++) {
+      if (spoken[i] === correct[i]) matchLength++;
+    }
+    matchPercent = (matchLength / correct.length) * 100;
+    let resultClass = 'wrong';
+    let resultText = '';
+    if (spoken === correct) {
+      resultClass = 'correct';
+      resultText = `✅ PERFEITO! (100% de acerto)`;
+      voiceMatchResult = { success: true, percent: 100, spoken: spoken };
+    } else if (matchPercent >= cfg.rigor) {
+      resultClass = 'partial';
+      resultText = `🟡 QUASE! (${Math.round(matchPercent)}% de acerto - mínimo ${cfg.rigor}%)`;
+      voiceMatchResult = { success: true, percent: matchPercent, spoken: spoken };
+    } else {
+      resultClass = 'wrong';
+      resultText = `❌ INCORRETO! (${Math.round(matchPercent)}% de acerto - mínimo ${cfg.rigor}%)<br>Correto: "${correct}"`;
+      voiceMatchResult = { success: false, percent: matchPercent, spoken: spoken };
+    }
+    if (matchDiv) {
+      matchDiv.className = `voice-match ${resultClass}`;
+      matchDiv.innerHTML = resultText;
+    }
+    if (statusDiv) statusDiv.textContent = resultClass === 'correct' ? '✅ ACERTOU!' : (resultClass === 'partial' ? '🟡 QUASE LÁ!' : '❌ ERROU!');
+  };
+  recognition.onerror = function() {
+    if (statusDiv) statusDiv.textContent = '❌ Erro no reconhecimento. Tente novamente.';
+    if (heardDiv) heardDiv.innerHTML = '';
+  };
+  recognition.start();
+}
+
+function closeVoiceModal() {
+  if (recognition) { recognition.abort(); }
+  document.getElementById('voice-modal').classList.remove('show');
+}
+
+function confirmVoiceMatch() {
+  if (voiceMatchResult && voiceMatchResult.success) {
+    const inp = document.getElementById('write-input');
+    if (inp) inp.value = voiceMatchResult.spoken;
+    toast(`✅ Reconhecido: "${voiceMatchResult.spoken}" - ${Math.round(voiceMatchResult.percent)}% de acerto!`, 'ok');
+  } else if (voiceMatchResult) {
+    toast(`❌ Não foi possível confirmar. A palavra correta é "${voiceCurrentWord}"`, 'err');
+  }
+  closeVoiceModal();
+}
+
+function listenWordAndTranslation() {
+  if (!queue.length || qIdx >= queue.length) return;
+  const word = queue[qIdx];
+  const translation = TR[word] || '';
+  if (window.speechSynthesis) {
+    speechSynthesis.cancel();
+    setTimeout(() => {
+      const utteranceEn = new SpeechSynthesisUtterance(word);
+      utteranceEn.lang = 'en-US';
+      utteranceEn.rate = 0.88;
+      utteranceEn.volume = 1;
+      utteranceEn.onend = function() {
+        setTimeout(() => {
+          const utterancePt = new SpeechSynthesisUtterance(translation);
+          utterancePt.lang = 'pt-BR';
+          utterancePt.rate = 0.9;
+          utterancePt.volume = 1;
+          speechSynthesis.speak(utterancePt);
+        }, 300);
+      };
+      speechSynthesis.speak(utteranceEn);
+    }, 100);
+  } else if (window.responsiveVoice) {
+    responsiveVoice.cancel();
+    responsiveVoice.speak(word, 'US English Female', {rate:0.88, onend: function() {
+      setTimeout(() => {
+        responsiveVoice.speak(translation, 'Brazilian Portuguese Female', {rate:0.9});
+      }, 300);
+    }});
+  }
+}
+
+function toast(msg, type='info') {
+  const t = document.getElementById('toast');
+  if (!t) return;
+  t.textContent = msg;
+  t.className = `toast show t-${type}`;
+  setTimeout(()=>t.classList.remove('show'), 1600);
+}
+
+function clearInput() {
+  const inp = document.getElementById('write-input');
+  if (inp) inp.value = '';
+  const clearBtn = document.getElementById('clear-btn');
+  if (clearBtn) clearBtn.style.display = 'none';
+  if (inp) inp.focus();
+}
+
+function verifyWord(autoReveal=false) {
+  if (isVerified) return;
+  isVerified = true;
+  stopTimer();
+  const word = queue[qIdx];
+  const trans = TR[word] || '';
+  const inp = document.getElementById('write-input');
+  const given = (inp?.value||'').trim().toLowerCase().replace(/\s+/g,'');
+  const correct = word.toLowerCase();
+  let result = 'wrong';
+  if (given === correct) { result = 'correct'; } 
+  else if (given.length > 0) {
+    let matches = 0, ci = 0;
+    for (let gi = 0; gi < given.length && ci < correct.length; gi++) {
+      if (given[gi] === correct[ci]) { matches++; ci++; }
+    }
+    if (matches / correct.length >= 0.7) result = 'partial';
+  }
+  if (inp) {
+    inp.disabled = true;
+    inp.className = 'write-input ' + (result==='correct'?'correct':result==='partial'?'partial':'wrong');
+  }
+  const oldResult = sessionResults.get(word);
+  sessionResults.set(word, result);
+  if (oldResult === 'correct') scOk--;
+  else if (oldResult === 'partial') scPar--;
+  else if (oldResult === 'wrong') scErr--;
+  if (result==='correct') { scOk++; known.add(word); saveK(); updateNav(); renderDayPills(); renderProg(); }
+  else if (result==='partial') scPar++;
+  else {
+    scErr++;
+    const oldCount = wordErrors.get(word) || 0;
+    wordErrors.set(word, oldCount + 1);
+    saveErrors();
+    renderErrorChart();
+  }
+  updateScores();
+  const verifyBtn = document.getElementById('verify-btn');
+  if (verifyBtn) verifyBtn.disabled = true;
+  if (verifyBtn) verifyBtn.textContent = result==='correct'?'✓ CORRETO!':result==='partial'?'~ QUASE!':'✗ ERRADO';
+  buildFeedback(result, word, trans, given, correct, autoReveal);
+  speak(word, SPD.normal);
+}
+
+function buildFeedback(result, word, trans, given, correct, autoReveal) {
+  const icons = { correct:'✅', partial:'🟡', wrong:'❌' };
+  const classes = { correct:'fp-correct', partial:'fp-partial', wrong:'fp-wrong' };
+  const fpIcon = document.getElementById('fp-icon');
+  const fpWord = document.getElementById('fp-word');
+  const fpTranslationArea = document.getElementById('fp-translation-area');
+  
+  if (fpIcon) fpIcon.textContent = icons[result];
+  if (fpWord) {
+    fpWord.textContent = word;
+    fpWord.style.color = result==='correct'?'var(--green-neon)':result==='partial'?'var(--blue-neon)':'var(--red-neon)';
+  }
+  
+  // Área de tradução com ícone ÚNICO baseado em HASH da palavra
+  if (fpTranslationArea) {
+    const wordIcon = getUniqueIconForWord(word);
+    fpTranslationArea.innerHTML = `
+      <div style="display: flex; align-items: center; justify-content: center; gap: 12px; flex-wrap: wrap; margin: 5px 0;">
+        <span style="font-size: 48px;">${wordIcon}</span>
+        <span style="font-size: 28px; font-weight: bold; color: var(--gold);">${trans}</span>
+      </div>
+    `;
+  }
+  
+  let diffHtml = '';
+  if (result !== 'correct' && given.length > 0) {
+    diffHtml = '<span style="color:var(--muted);font-size:10px">Você escreveu: </span>';
+    const maxLen = Math.max(given.length, correct.length);
+    for (let i = 0; i < maxLen; i++) {
+      const gc = given[i] || '';
+      const cc = correct[i] || '';
+      if (!gc) diffHtml += `<span class="m">${cc}</span>`;
+      else if (gc === cc) diffHtml += `<span class="c">${gc}</span>`;
+      else diffHtml += `<span class="w">${gc}</span>`;
+    }
+    diffHtml += `<br><span style="color:var(--muted);font-size:10px">Correto: </span>`;
+    for (let i = 0; i < correct.length; i++) {
+      const gc = given[i] || '';
+      const cc = correct[i];
+      diffHtml += `<span class="${gc===cc?'c':'m'}">${cc}</span>`;
+    }
+  } else if (result === 'correct') {
+    diffHtml = `<span style="color:var(--green-neon)">Perfeito! Cada letra no lugar certo ✓</span>`;
+  } else if (autoReveal) {
+    diffHtml = `<span style="color:var(--muted)">Tempo esgotado — a resposta está acima</span>`;
+  }
+  const fpDiff = document.getElementById('fp-diff');
+  if (fpDiff) fpDiff.innerHTML = diffHtml;
+  
+  let tip = '';
+  if (cfg.tip==='pron' || cfg.tip==='both') {
+    tip += `📝 Ortografia: <strong style="font-family:'DM Mono';letter-spacing:3px;color:var(--green-neon)">${word.toUpperCase().split('').join(' · ')}</strong><br>🔤 ${word.length} letras`;
+  }
+  if (cfg.tip==='trans' || cfg.tip==='both') {
+    tip += (tip?'<br>':'') + `🇧🇷 Tradução: <strong>${trans}</strong>`;
+  }
+  if (!tip) tip = `🇧🇷 <strong>${trans}</strong>`;
+  const fpTip = document.getElementById('fp-tip');
+  if (fpTip) fpTip.innerHTML = tip;
+  
+  const fb = document.getElementById('fb-panel');
+  if (fb) {
+    fb.className = `feedback-panel show ${classes[result]}`;
+    const nb = fb.querySelector('.next-btn');
+    if (nb) nb.className = 'next-btn' + (result==='correct'?' primary':'');
+  }
+  if (result==='correct') toast('✓ Correto!', 'ok');
+  else if (result==='partial') toast('~ Quase! Confira as letras', 'part');
+  else toast('✗ ' + word, 'err');
+}
+
+function updateScores() {
+  const scOkSpan = document.getElementById('sc-ok');
+  const scParSpan = document.getElementById('sc-par');
+  const scErrSpan = document.getElementById('sc-err');
+  const scPctSpan = document.getElementById('sc-pct');
+  if (scOkSpan) scOkSpan.textContent = scOk;
+  if (scParSpan) scParSpan.textContent = scPar;
+  if (scErrSpan) scErrSpan.textContent = scErr;
+  const tot = scOk+scPar+scErr;
+  if (scPctSpan) scPctSpan.textContent = tot ? Math.round(scOk/tot*100)+'%' : '0%';
+}
+
+function updateNav() {
+  const span = document.getElementById('nv-ok');
+  if (span) span.textContent = known.size;
+}
+
+function getProgressColor(percent) {
+  if (percent < 20) return 'var(--red-neon)';
+  if (percent < 50) return 'var(--orange-neon)';
+  if (percent < 80) return 'var(--blue-neon)';
+  return 'var(--green-neon)';
+}
+
+function getProgressEmoji(percent) {
+  if (percent >= 100) return '✅';
+  if (percent >= 80) return '📗';
+  if (percent >= 50) return '📙';
+  if (percent >= 20) return '📘';
+  if (percent >= 1) return '🔴';
+  return '📖';
+}
+
+function renderDayPills() {
+  const container = document.getElementById('dpills');
+  if (!container) return;
+  container.innerHTML = '';
+  
+  const allDominated = [...ALL_WORDS].filter(w => known.has(w)).length;
+  const allPercent = Math.round(allDominated / ALL_WORDS.length * 100);
+  const allColor = getProgressColor(allPercent);
+  const allCompleted = allPercent === 100;
+  const allEmoji = getProgressEmoji(allPercent);
+  
+  const allBtn = document.createElement('div');
+  allBtn.className = 'dp' + (currentDay === -1 ? ' active' : '') + (allCompleted ? ' completed' : '');
+  let allProgress = 'high';
+  if (allPercent >= 100) allProgress = 'complete';
+  else if (allPercent >= 70) allProgress = 'high';
+  else if (allPercent >= 40) allProgress = 'medium';
+  else if (allPercent >= 10) allProgress = 'low';
+  else allProgress = 'none';
+  allBtn.setAttribute('data-progress', allProgress);
+  allBtn.onclick = () => { currentDay = -1; currentFilter = 'all'; renderDayPills(); buildQueue(); };
+  allBtn.innerHTML = `
+    <div class="dp-title">${allEmoji} TODAS</div>
+    <div class="dp-stats">${allDominated}/${ALL_WORDS.length} (${allPercent}%)</div>
+    <div class="dp-bar-bg"><div class="dp-bar-fill" style="width:${allPercent}%; background:${allColor}"></div></div>
+    <div class="dp-percent">${allPercent}%</div>
+  `;
+  container.appendChild(allBtn);
+  
+  for (let i = 0; i < DAYS_COUNT; i++) {
+    const dayWords = DAYS_WORDS[i];
+    const dominated = dayWords.filter(w => known.has(w)).length;
+    const percent = Math.round(dominated / dayWords.length * 100);
+    const color = getProgressColor(percent);
+    const completed = percent === 100;
+    const dayEmoji = getProgressEmoji(percent);
+    
+    let progressLevel = 'none';
+    if (percent >= 100) progressLevel = 'complete';
+    else if (percent >= 70) progressLevel = 'high';
+    else if (percent >= 40) progressLevel = 'medium';
+    else if (percent >= 10) progressLevel = 'low';
+    else progressLevel = 'none';
+    
+    const btn = document.createElement('div');
+    btn.className = 'dp' + (currentDay === i ? ' active' : '') + (completed ? ' completed' : '');
+    btn.setAttribute('data-progress', progressLevel);
+    btn.onclick = () => { currentDay = i; currentFilter = 'all'; renderDayPills(); buildQueue(); };
+    btn.innerHTML = `
+      <div class="dp-title">${dayEmoji} DIA ${i+1}</div>
+      <div class="dp-stats">${dominated}/${dayWords.length} (${percent}%)</div>
+      <div class="dp-bar-bg"><div class="dp-bar-fill" style="width:${percent}%; background:${color}"></div></div>
+      <div class="dp-percent">${percent}%</div>
+    `;
+    container.appendChild(btn);
+  }
+}
+
+let currentFilter = 'all';
+
+function buildQueue() {
+  let pool = [];
+  if (currentDay === -1) {
+    pool = [...ALL_WORDS];
+  } else {
+    pool = [...DAYS_WORDS[currentDay]];
+  }
+  if (currentFilter === 'wrong') {
+    pool = pool.filter(w => sessionResults.get(w) === 'wrong');
+  } else if (currentFilter === 'not_known') {
+    pool = pool.filter(w => !known.has(w));
+  }
+  if (cfg.ord === 'hard' && currentFilter === 'all') {
+    pool = pool.filter(w => !known.has(w));
+  }
+  if (!pool.length) {
+    if (currentFilter !== 'all') {
+      if (currentFilter === 'not_known') {
+        toast('🎉 Você já dominou todas as palavras!', 'ok');
+      } else {
+        toast('Voltando para todas as palavras', 'info');
+      }
+      currentFilter = 'all';
+      return buildQueue();
+    }
+    pool = currentDay === -1 ? [...ALL_WORDS] : [...DAYS_WORDS[currentDay]];
+    if (cfg.ord === 'hard' && currentFilter === 'all') {
+      pool = pool.filter(w => !known.has(w));
+      if (!pool.length) {
+        toast('🎉 Parabéns! Você dominou todas as palavras!', 'ok');
+        pool = currentDay === -1 ? [...ALL_WORDS] : [...DAYS_WORDS[currentDay]];
+      }
+    }
+  }
+  queue = cfg.ord === 'seq' ? [...pool] : shuffle([...pool]);
+  qIdx = 0;
+  updateSessionStats();
+  loadCurrentWord();
+}
+
+function updateSessionStats() {
+  scOk = 0; scPar = 0; scErr = 0;
+  for (let [word, result] of sessionResults) {
+    if (queue.includes(word)) {
+      if (result === 'correct') scOk++;
+      else if (result === 'partial') scPar++;
+      else if (result === 'wrong') scErr++;
+    }
+  }
+  updateScores();
+}
+
+function refazerErradas() {
+  if (scErr === 0) { toast('Nenhuma palavra errada nesta seleção!', 'info'); return; }
+  currentFilter = 'wrong';
+  buildQueue();
+  toast('❌ Refazendo apenas palavras ERRADAS', 'err');
+}
+
+function refazerTopRepeticoes() {
+  if (repeticoesCount.size === 0) {
+    toast('📊 Nenhuma palavra repetida com REPETIR 5x ainda! Use o botão 🔁 REPETIR 5x primeiro.', 'info');
+    return;
+  }
+  
+  const sorted = [...repeticoesCount.entries()].sort((a,b) => b[1] - a[1]).slice(0, 10);
+  const topWords = sorted.map(([word]) => word);
+  
+  let availableWords = [];
+  if (currentDay === -1) {
+    availableWords = [...ALL_WORDS];
+  } else {
+    availableWords = [...DAYS_WORDS[currentDay]];
+  }
+  
+  const filteredTop = topWords.filter(w => availableWords.includes(w));
+  
+  if (filteredTop.length === 0) {
+    toast('📊 Nenhuma das palavras mais repetidas está no dia selecionado!', 'info');
+    return;
+  }
+  
+  queue = shuffle([...filteredTop]);
+  qIdx = 0;
+  currentFilter = 'all';
+  updateSessionStats();
+  loadCurrentWord();
+  goTab('treino', document.querySelectorAll('.tab')[0]);
+  toast(`🎯 Praticando TOP ${filteredTop.length} palavras mais repetidas!`, 'info');
+}
+
+function refazerNaoDominadas() {
+  let poolCheck = [];
+  if (currentDay === -1) { poolCheck = [...ALL_WORDS]; } 
+  else { poolCheck = [...DAYS_WORDS[currentDay]]; }
+  const notKnownCount = poolCheck.filter(w => !known.has(w)).length;
+  if (notKnownCount === 0) { toast('🎉 Você já dominou todas as palavras deste dia!', 'ok'); return; }
+  currentFilter = 'not_known';
+  buildQueue();
+  toast(`📚 Foco nas palavras NÃO DOMINADAS (${notKnownCount} restantes)`, 'info');
+}
+
+function renderProg() {
+  const k = known.size, t = ALL_WORDS.length;
+  const pgBig = document.getElementById('pg-big');
+  const pgSub = document.getElementById('pg-sub');
+  const pgBar = document.getElementById('pg-bar');
+  if (pgBig) pgBig.textContent = k;
+  if (pgSub) pgSub.textContent = `palavras dominadas de ${t} — ${Math.round(k/t*100)}%`;
+  if (pgBar) pgBar.style.width = (k/t*100)+'%';
+  const tot = scOk+scPar+scErr;
+  const pgSession = document.getElementById('pg-session');
+  if (pgSession) {
+    pgSession.innerHTML = `
+      <div class="pg-s-box"><div class="pg-s-n" style="color:var(--green-neon)">${scOk}</div><div class="pg-s-l">CERTAS</div></div>
+      <div class="pg-s-box"><div class="pg-s-n" style="color:var(--blue-neon)">${scPar}</div><div class="pg-s-l">QUASE</div></div>
+      <div class="pg-s-box"><div class="pg-s-n" style="color:var(--red-neon)">${scErr}</div><div class="pg-s-l">ERRADAS</div></div>
+      <div class="pg-s-box"><div class="pg-s-n" style="color:var(--gold)">${tot?Math.round(scOk/tot*100):0}%</div><div class="pg-s-l">ACERTO</div></div>
+    `;
+  }
+  const grid = document.getElementById('days-grid');
+  if (!grid) return;
+  grid.innerHTML = '';
+  const allDominated = [...ALL_WORDS].filter(w => known.has(w)).length;
+  const allPercent = Math.round(allDominated / ALL_WORDS.length * 100);
+  const allColor = getProgressColor(allPercent);
+  const allCompleted = allPercent === 100;
+  const allCard = document.createElement('div');
+  allCard.className = 'day-card' + (allCompleted ? ' completed' : '');
+  allCard.style.borderTop = `3px solid ${allCompleted ? 'var(--green-neon)' : 'var(--gold)'}`;
+  allCard.innerHTML = `
+    <div class="day-header">
+      <div class="day-title" style="color:${allCompleted ? 'var(--green-neon)' : 'var(--gold)'}">🎯 TODAS AS PALAVRAS</div>
+      <div class="day-stats">${allDominated}/${ALL_WORDS.length} (${allPercent}%)</div>
+    </div>
+    <div class="day-bar"><div class="day-fill" style="width:${allPercent}%; background:${allColor}"></div></div>
+    <div class="day-detail"><span>📖 ${ALL_WORDS.length} palavras</span><span>🎯 ${allDominated} dominadas</span></div>
+  `;
+  allCard.onclick = () => { currentDay = -1; currentFilter = 'all'; renderDayPills(); buildQueue(); const tab = document.querySelectorAll('.tab')[0]; if(tab) goTab('treino', tab); };
+  grid.appendChild(allCard);
+  for (let i = 0; i < DAYS_COUNT; i++) {
+    const dayWords = DAYS_WORDS[i];
+    const dominated = dayWords.filter(w => known.has(w)).length;
+    const percent = Math.round(dominated / dayWords.length * 100);
+    const color = DAY_COLORS[i % DAY_COLORS.length];
+    const completed = percent === 100;
+    const card = document.createElement('div');
+    card.className = 'day-card' + (completed ? ' completed' : '');
+    card.style.borderTop = `3px solid ${completed ? 'var(--green-neon)' : color}`;
+    card.innerHTML = `
+      <div class="day-header">
+        <div class="day-title" style="color:${completed ? 'var(--green-neon)' : color}">📅 DIA ${i+1}</div>
+        <div class="day-stats">${dominated}/${dayWords.length} (${percent}%)</div>
+      </div>
+      <div class="day-bar"><div class="day-fill" style="width:${percent}%; background:${color}"></div></div>
+      <div class="day-detail"><span>📖 ${dayWords.length} palavras</span><span>🎯 ${dominated} dominadas</span></div>
+    `;
+    card.onclick = () => { currentDay = i; currentFilter = 'all'; renderDayPills(); buildQueue(); const tab = document.querySelectorAll('.tab')[0]; if(tab) goTab('treino', tab); };
+    grid.appendChild(card);
+  }
+}
+
+function renderErrorChart() {
+  const container = document.getElementById('error-chart-bars');
+  if (!container) return;
+  const sorted = [...wordErrors.entries()].sort((a,b) => b[1] - a[1]).slice(0, 15);
+  container.innerHTML = '';
+  if (sorted.length === 0) {
+    container.innerHTML = '<div style="text-align:center;padding:20px;color:var(--muted)">✨ Nenhum erro registrado ainda!</div>';
+    return;
+  }
+  const maxErrors = Math.max(...sorted.map(([,count]) => count), 1);
+  sorted.forEach(([word, errors]) => {
+    const percentage = (errors / maxErrors) * 100;
+    const item = document.createElement('div');
+    item.className = 'error-bar-item';
+    item.innerHTML = `
+      <div class="error-bar-word" title="${word}">${word.length > 12 ? word.slice(0,10)+'…' : word}</div>
+      <div class="error-bar-bg">
+        <div class="error-bar-fill" style="width: ${percentage}%">${errors > 3 ? errors : ''}</div>
+      </div>
+      <div class="error-bar-count">${errors}</div>
+    `;
+    container.appendChild(item);
+  });
+}
+
+function practiceAllDifficult() {
+  const sorted = [...wordErrors.entries()].sort((a,b) => b[1] - a[1]).slice(0, 10);
+  if (sorted.length === 0) {
+    toast('🎉 Nenhuma palavra difícil! Você está arrasando!', 'ok');
+    return;
+  }
+  const difficultWords = sorted.map(([word]) => word);
+  queue = shuffle([...difficultWords]);
+  qIdx = 0;
+  currentDay = -1;
+  currentFilter = 'all';
+  updateSessionStats();
+  loadCurrentWord();
+  goTab('treino', document.querySelectorAll('.tab')[0]);
+  toast(`🎯 Praticando TOP ${difficultWords.length} palavras mais difíceis!`, 'info');
+}
+
+function goTab(id, btn) {
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(b=>b.classList.remove('active'));
+  const page = document.getElementById('page-'+id);
+  if (page) page.classList.add('active');
+  btn.classList.add('active');
+  window.scrollTo(0,0);
+  if (id === 'prog') {
+    renderErrorChart();
+  }
+}
+
+function goBack() {
+  const activePage = document.querySelector('.page.active');
+  if (!activePage) return;
+  const id = activePage.id;
+  if (id === 'page-treino') {
+    const tabBtn = document.querySelectorAll('.tab')[1];
+    if (tabBtn) goTab('prog', tabBtn);
+    renderProg();
+  } else if (id === 'page-prog') {
+    const tabBtn = document.querySelectorAll('.tab')[0];
+    if (tabBtn) goTab('treino', tabBtn);
+  } else if (id === 'page-cfg') {
+    const tabBtn = document.querySelectorAll('.tab')[0];
+    if (tabBtn) goTab('treino', tabBtn);
+  }
+}
+
+function setTime(v) {
+  cfg.time=parseInt(v);
+  const timeV = document.getElementById('time-v');
+  const timeSl = document.getElementById('time-sl');
+  if (timeV) timeV.textContent=v+'s';
+  if (timeSl) timeSl.style.setProperty('--p',((v-10)/50*100)+'%');
+  saveC();
+}
+
+function setTip(t) {
+  cfg.tip=t;
+  ['pron','trans','both'].forEach(x=>{const el = document.getElementById('tip-'+x); if(el) el.classList.toggle('active',x===t);});
+  saveC();
+}
+
+function setOrd(o) {
+  cfg.ord=o;
+  ['random','seq','hard'].forEach(x=>{const el = document.getElementById('ord-'+x); if(el) el.classList.toggle('active',x===o);});
+  saveC(); buildQueue();
+}
+
+function resetAll() {
+  if (!confirm('Resetar todo progresso? Resetará todas as palavras dominadas e histórico de erros.')) return;
+  known.clear(); sessionResults.clear(); wordErrors.clear(); repeticoesCount.clear(); wordIconCache.clear();
+  saveK(); saveErrors(); saveReps(); saveIconCache();
+  updateNav(); toast('Progresso resetado!', 'err');
+  renderErrorChart();
+  buildQueue(); renderProg(); renderDayPills();
+}
+
+function syncUI() {
+  setTime(cfg.time);
+  const timeSl = document.getElementById('time-sl');
+  if (timeSl) timeSl.value=cfg.time;
+  setTip(cfg.tip);
+  setOrd(cfg.ord);
+  setRigor(cfg.rigor);
+  const rigorSl = document.getElementById('rigor-sl');
+  if (rigorSl) rigorSl.value=cfg.rigor;
+  setSlowSpeed(cfg.slowSpeed);
+  const slowSl = document.getElementById('slow-speed-sl');
+  if (slowSl) slowSl.value=cfg.slowSpeed;
+}
+
+const unlockBtn = document.getElementById('unlock-btn');
+if (unlockBtn) {
+  unlockBtn.addEventListener('click', function() {
+    speak('hello');
+    const unlockDiv = document.getElementById('unlock');
+    if (unlockDiv) {
+      unlockDiv.style.transition='opacity 0.4s';
+      unlockDiv.style.opacity='0';
+      setTimeout(()=>unlockDiv.style.display='none', 400);
+      setTimeout(()=>loadCurrentWord(), 600);
+    }
+  });
+}
+
+updateNav();
+renderDayPills();
+buildQueue();
+syncUI();
+renderErrorChart();
+
+const inputElem = document.getElementById('write-input');
+if (inputElem) {
+  inputElem.addEventListener('input', function() {
+    const clearBtn = document.getElementById('clear-btn');
+    if (clearBtn) clearBtn.style.display = this.value ? 'block' : 'none';
+  });
+  inputElem.addEventListener('keydown', function(e) {
+    if (e.key === 'Enter' && !isVerified) verifyWord();
+  });
+}
+</script>
+</body>
+</html>
