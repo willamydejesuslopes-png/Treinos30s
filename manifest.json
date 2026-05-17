@@ -1,0 +1,26 @@
+{
+  "name": "Treino 30s",
+  "short_name": "Treino30s",
+  "description": "Aprenda 1.435 palavras em inglês em 15 dias",
+  "start_url": "/Treinos30s/",
+  "display": "standalone",
+  "theme_color": "#FFD600",
+  "background_color": "#0A0A0F",
+  "icons": [
+    {
+      "src": "https://emojicdn.elk.sh/📚?size=128",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "https://emojicdn.elk.sh/📚?size=192",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "https://emojicdn.elk.sh/📚?size=512",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
