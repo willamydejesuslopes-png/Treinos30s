@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
+<head> <link rel="manifest" href="manifest.json">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Treino 30s">
+<link rel="apple-touch-icon" href="https://emojicdn.elk.sh/📚?size=180">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <meta name="mobile-web-app-capable" content="yes">
@@ -1980,5 +1984,11 @@ if (inputElem) {
   });
 }
 </script>
-</body>
+<script>
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/Treinos30s/sw.js')
+    .then(() => console.log('App instalado!'))
+    .catch(err => console.log('Erro:', err));
+}
+</script></body>
 </html>
